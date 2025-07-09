@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <title>台北富邦銀行 - 台塑信用狀系統</title>
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" media="all" />
+  <link rel="stylesheet" href="./css/custom.css">
+</head>
+
+<body>
+  <header class="navbar fixed-top flex-nowrap border-bottom p-0 shadow-sm">
+    <div class="navbar-brand me-0 px-3">
+      <img src="./images/img-hd-logo.png" alt="FB logo" class="pe-2">
+      <span class="align-text-top fs-4 fw-bold custom-element" style="color: #2a91bc;">台塑信用狀系統</span>
+    </div>
+    <nav class="d-inline-flex align-items-center me-4">
+      <span class="px-2 tfb__text fw-bolder">Linda 您好，歡迎使用本系統</span>
+      <span class="px-2">|</span>
+      <a id="todoList" class="tfb__link-tab mx-2" href="javascript:void(0)">待辦事項</a>
+      <a id="info" class="tfb__link-tab mx-2" href="javascript:void(0)">訊息匣</a>
+      <button id="logout" class="btn logout btn-sm ms-3 px-3" type="button">
+        <span class="mdi mdi-logout"></span>
+        登出
+      </button>
+    </nav>
+  </header>
+  <div class="container-fluid px-0">
+    <nav id="sidebarMenu" class="d-block sidebar collapse">
+      <div class="position-sticky pb-5">
+        <div class="accordion" id="accordionSideMenu">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="py-2 fs-1-5 fw-bold accordion-button tfb__menu-title rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#searchList" aria-expanded="true" aria-controls="searchList">
+                查詢作業
+              </button>
+            </h2>
+            <div id="searchList" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionSideMenu">
+              <div class="accordion-body p-0">
+                <div class="list-group list-group-flush" id="list-tab" role="tablist">
+                  <a class="ps-4 border-0 list-group-item list-group-item-action tfb__menu-btn active" id="lcList" data-bs-toggle="list" href="javascript:void(0)" role="tab" aria-controls="list-home">
+                    查詢信用狀資料
+                  </a>
+                  <a class="ps-4 border-0 list-group-item list-group-item-action tfb__menu-btn" id="negotiationList" data-bs-toggle="list" href="javascript:void(0)" role="tab" aria-controls="list-profile">
+                    查詢押匯資料
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="py-2 fs-1-5 fw-bold accordion-button tfb__menu-title rounded-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#negotiation" aria-expanded="false" aria-controls="negotiation">
+                押匯作業
+              </button>
+            </h2>
+            <div id="negotiation" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionSideMenu">
+              <div class="accordion-body p-0">
+                <div class="list-group list-group-flush" id="list-tab" role="tablist">
+                  <a class="ps-4 border-0 list-group-item list-group-item-action tfb__menu-btn" id="acceptNegotiation" data-bs-toggle="list" href="javascript:void(0)" role="tab" aria-controls="list-home">
+                    受理押匯作業
+                  </a>
+                  <a class="ps-4 border-0 list-group-item list-group-item-action tfb__menu-btn" id="checkNegotiation" data-bs-toggle="list" href="javascript:void(0)" role="tab" aria-controls="list-profile">
+                    審核押匯作業
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="py-2 fs-1-5 fw-bold accordion-button tfb__menu-title rounded-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#management" aria-expanded="false" aria-controls="management">
+                管理作業
+              </button>
+            </h2>
+            <div id="management" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionSideMenu">
+              <div class="accordion-body p-0">
+                <div class="list-group list-group-flush" id="list-tab" role="tablist">
+                  <a class="ps-4 border-0 list-group-item list-group-item-action tfb__menu-btn" id="setGroup" data-bs-toggle="list" href="javascript:void(0)" role="tab" aria-controls="list-home">
+                    台塑集團及事業部
+                  </a>
+                  <a class="ps-4 border-0 list-group-item list-group-item-action tfb__menu-btn" id="setBeneficiary" data-bs-toggle="list" href="javascript:void(0)" role="tab" aria-controls="list-profile">
+                    台塑集團受益人
+                  </a>
+                  <a class="ps-4 border-0 list-group-item list-group-item-action tfb__menu-btn" id="setLcTable" data-bs-toggle="list" href="javascript:void(0)" role="tab" aria-controls="list-profile">
+                    台塑集團信用狀統計表
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="py-2 fs-1-5 fw-bold accordion-button tfb__menu-title rounded-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#record" aria-expanded="false" aria-controls="record">
+                系統紀錄
+              </button>
+            </h2>
+            <div id="record" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionSideMenu">
+              <div class="accordion-body p-0">
+                <div class="list-group list-group-flush" id="list-tab" role="tablist">
+                  <a class="ps-4 border-0 list-group-item list-group-item-action tfb__menu-btn" id="track" data-bs-toggle="list" href="javascript:void(0)" role="tab" aria-controls="list-home">
+                    存取軌跡紀錄
+                  </a>
+                  <a class="ps-4 border-0 list-group-item list-group-item-action tfb__menu-btn" id="send" data-bs-toggle="list" href="javascript:void(0)" role="tab" aria-controls="list-profile">
+                    傳送失敗紀錄
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list-group rounded-0" id="list-tab" role="tablist" style="margin: 0 1px;">          
+          <a class="border-0 list-group-item list-group-item-action tfb__menu-btn fs-1-5 fw-bolder" id="roleManager" href="javascript:void(0)" role="tab" aria-controls="list-profile" style="padding-left: 1.25rem;line-height: 1.2;">
+            角色維護
+          </a>
+          <a class="border-0 list-group-item list-group-item-action tfb__menu-btn fs-1-5 fw-bolder" id="accountManager" href="javascript:void(0)" role="tab" aria-controls="list-home" style="padding-left: 1.25rem;line-height: 1.2;">
+             帳號維護
+          </a>
+          <a class="border-0 list-group-item list-group-item-action tfb__menu-btn fs-1-5 fw-bolder" id="branchManager" href="javascript:void(0)" role="tab" aria-controls="list-profile" style="padding-left: 1.25rem;line-height: 1.2;">
+            分行資料查詢
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="content__wrapper">  
+      <iframe
+        id="main-content"
+        title="Inline Frame"
+        src="./pages/lcList.html"
+        style="width: 100%; height: 100%">
+      </iframe>
+    </main>
+  </div>
+  <footer class="navbar fixed-bottom flex-nowrap p-3">
+  </footer>
+
+  <script>
+    // 檢查 cookie 值是否存在
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    const userName = getCookie('username');
+
+    window.onload = (event) => {
+      if (!userName) {
+        window.location.href = './login.html'
+      } 
+    };
+
+    // 登出
+      const logout = document.querySelector('#logout');
+      logout.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log('ok')
+        document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        window.location.href = './login.html'
+      });
+  </script>
+  <!-- JS Plugin -->
+  <script src="./js/bootstrap.bundle.min.js"></script>  
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="./js/sideMenu.js"></script>
+</body>
+</html>
