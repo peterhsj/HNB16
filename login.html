@@ -4,21 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-  <title>台北富邦銀行 - 台塑信用狀系統</title>
-  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" media="all" />
-  <link rel="stylesheet" href="./css/custom.css">
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+  <title>華南銀行 - 國內信用狀系統</title>
+  <link rel="stylesheet" href="./assets/MaterialDesign-Webfont/css/materialdesignicons.min.css" media="all" />
+  <link rel="stylesheet" href="./assets/css/custom.css">
 </head>
 
 <body>
-  <div class="px-0 tfb__signin-wrapper">
-    <main class="tfb__signin-form">
+  <div class="px-0 hnb__signin-wrapper">
+    <main class="hnb__signin-form">
       <form>
         <div class="text-center pb-2">
-          <img class="mb-1" src="./images/img-hd-logo.png" alt="">
+          <img class="mb-1 logo" src="./assets/images/logo-hncb.png" alt="HNB logo">
           <div class="align-text-top fs-4 fw-bold custom-element" style="color: #2a91bc;">
-            台塑信用狀系統
+            國內信用狀系統
           </div>
         </div>
 
@@ -40,11 +39,11 @@
     const signIn = document.querySelector('#signIn');
     signIn.addEventListener('click', (e) => {
       e.preventDefault();
-      document.cookie = 'username=tfb';
+      document.cookie = 'username=hnb';
       window.location.href = './index.html'
     });
   </script>
-  <script src="./js/bootstrap.bundle.min.js"></script>  
-  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>  
+  <script src="./assets/js/jquery-3.7.1.js"></script>
 </body>
 </html>
