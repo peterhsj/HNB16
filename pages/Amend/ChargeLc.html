@@ -199,10 +199,10 @@
         </div>
         <div class="mb-3">
           <div class="text-end">
-            <span class="hnb__text">總筆數：</span>4 ，<span class="hnb__text">本頁總金額：</span>NT$ 522,664
+            <span class="hnb__text--red">總筆數：</span>4 ，<span class="hnb__text--red">本頁總金額：</span>NT$ 522,664
           </div>
           <div class="text-end">
-            <span class="hnb__text">總金額：</span>NT$ 1,422,664
+            <span class="hnb__text--red">總金額：</span>NT$ 1,422,664
           </div>
         </div>
       </nav>
@@ -296,8 +296,52 @@
               取消
             </button>
             <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default text-nowrap"
-              data-bs-dismiss="modal">
+              data-bs-toggle="modal" data-bs-target="#confirmChargeFeeModal">
               確認
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 確認補收費用 視窗 -->
+  <div class="modal fade" id="confirmChargeFeeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="confirmChargeFeeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+      <form id="accountManagerForm">
+        <div class="modal-content hnb__modal">
+          <div class="modal-header py-2 border-bottom-0">
+            <h5 class="modal-title fs-5 fw-bolder text--hnb" id="confirmChargeFeeModalLabel">
+              作業訊息
+            </h5>
+            <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal"
+              aria-label="Close">
+              <span class="mdi mdi-close"></span>
+            </button>
+          </div>
+          <div class="modal-body bg-light">
+            <p>
+              <span class="fw-bold hnb__text--green">匯票號碼：</span>
+              H970000004
+            </p>
+            <p>
+              <span class="fw-bold hnb__text--green">審核動作：</span>
+              核准
+            </p>
+            <p>
+              <span class="fw-bold hnb__text--green">審核結果：</span>
+              審核完成
+            </p>
+          </div>
+          <div class="modal-footer justify-content-center border-top-0">
+            <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default text-nowrap">
+              <span class="mdi mdi-content-save"></span>
+              另存新檔
+            </button>
+            <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--print text-nowrap">
+              <span class="mdi mdi-printer"></span>
+              列印
             </button>
           </div>
         </div>
@@ -362,7 +406,9 @@
                       <span class="fw-bold">通知銀行：</span>華南商業銀行 建成分行
                     </td>
                     <td colspan="2">
-                      <span class="fw-bold">金額：</span>新台幣 伍仟萬元整
+                      <span class="fw-bold">金額：</span>
+                      新台幣
+                      <span class="hnb__text--red">伍仟萬元整</span>
                     </td>
                   </tr>
                   <tr>
@@ -801,7 +847,7 @@
                                   <p class="mb-1">一、憑票請於中華民國 114 年 01 月 03 日支付中鴻鋼鐵股份有限公司或其指定人</p>
                                   <p class="mb-0 ms-4 fs-5 fw-bold">
                                     <span class="p-2 pe-0">新台幣</span>
-                                    <span class="p-2 pe-5 hnb__text hnb__bg--yellow">陸拾伍元整</span>
+                                    <span class="p-2 pe-5 hnb__text--red hnb__bg--yellow">陸拾伍元整</span>
                                   </p>
                                   <p class="mb-1">二、付款處所 華南商業銀行 城東分行</p>
                                   <p class="mb-1">三、本匯票係依據 華南商業銀行 城東分行</p>
@@ -844,7 +890,7 @@
                                   <p class="mb-1">茲經承兌屆期照付</p>
                                   <p class="mb-0 ms-4 fs-5 fw-bold">
                                     <span class="p-2 pe-0">新台幣</span>
-                                    <span class="p-2 pe-5 hnb__text hnb__bg--yellow">陸拾伍元整</span>
+                                    <span class="p-2 pe-5 hnb__text--red hnb__bg--yellow">陸拾伍元整</span>
                                   </p>
                                 </div>
                                 <div class="py-1 col-6">
@@ -1068,7 +1114,8 @@
                                       <div class="row align-items-center">
                                         <div class="py-1 col-12">
                                           <span class="fw-bold">金額：</span>
-                                          新台幣 陸拾伍元整
+                                          新台幣
+                                          <span class="hnb__text--red">陸拾伍元整</span>
                                         </div>
                                         <div class="py-1 col-12">
                                           <span class="fw-bold">付款人：</span>
@@ -1522,7 +1569,7 @@
   <script>
     // 不收費用
     function noCharge() {
-      if (confirm('是否確定不再補收此次之開狀手續費？') === true) {
+      if (confirm('確定不再補收此次之開狀手續費？') === true) {
         location.href = 'ChargeLc.html';
       };
     };

@@ -56,7 +56,7 @@
             <td>台北市重慶南路一段99號</td>
             <td>02-77666666</td>
           </tr>
-          
+
         </tbody>
       </table>
       <nav class="mt-3 d-flex align-items-center justify-content-between">
@@ -92,24 +92,26 @@
           </div>
         </div>
         <div class="mb-3">
-          <span class="hnb__text">總筆數：</span>4 / <span class="hnb__text">總頁數：</span>1
+          <span class="hnb__text--red">總筆數：</span>4 / <span class="hnb__text--red">總頁數：</span>1
         </div>
       </nav>
     </div>
 
     <!-- branchModal -->
-    <div class="modal fade" id="branchModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="branchModalLabel" aria-hidden="true">
+    <div class="modal fade" id="branchModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="branchModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content hnb__modal">
           <form id="branchManagerForm">
             <div class="modal-header py-2 border-bottom-0">
               <h5 class="modal-title fs-5 fw-bolder">
                 <span id="branchTitle">新增/編輯分行資料</span>
-                <span class="ms-2 fs-0-8 hnb__text text-danger">
+                <span class="ms-2 fs-0-8 hnb__text--red text-danger">
                   * 為必填欄位
                 </span>
               </h5>
-              <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal" aria-label="Close">
+              <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal"
+                aria-label="Close">
                 <span class="mdi mdi-close"></span>
               </button>
             </div>
@@ -205,7 +207,7 @@
         this[id] = document.querySelector(`#${id}`);
         return this[id];
       });
-      
+
       // 新增
       addItem.addEventListener('click', () => {
         branchTitle.textContent = '新增分行資料';
@@ -235,15 +237,16 @@
       // modalConfirm button Handler
       const branchModal = document.querySelector('#branchModal');
       const modalConfirm = document.querySelector('#modalConfirm');
-      modalConfirm.addEventListener('click', function() {
+      modalConfirm.addEventListener('click', function () {
         $(branchModal).modal('hide');
       })
-    
+
     </script>
   </div>
   <!-- 分行資料查詢 -->
-  <script src="../assets/js/bootstrap.bundle.min.js"></script>  
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/jquery-3.7.1.js"></script>
   <script src="../assets/js/page.js"></script>
 </body>
+
 </html>

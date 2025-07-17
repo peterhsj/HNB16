@@ -22,7 +22,8 @@
     </nav>
     <h1 class="fs-4 fw-bolder">帳號管理</h1>
     <div class="py-2 text-end">
-      <button type="button" id="addItem" class="px-3 btn btn-sm hnb__btn--default" data-bs-toggle="modal" data-bs-target="#accountManagerModal">
+      <button type="button" id="addItem" class="px-3 btn btn-sm hnb__btn--default" data-bs-toggle="modal"
+        data-bs-target="#accountManagerModal">
         <span class="mdi mdi-plus"></span>
         新增
       </button>
@@ -53,7 +54,8 @@
               </div>
             </td>
             <td class="text-center w-25">
-              <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default" data-bs-toggle="modal" data-bs-target="#accountManagerModal">
+              <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default" data-bs-toggle="modal"
+                data-bs-target="#accountManagerModal">
                 <span class="mdi mdi-pencil"></span>
                 編輯
               </button>
@@ -72,7 +74,8 @@
               </div>
             </td>
             <td class="text-center w-25">
-              <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default" data-bs-toggle="modal" data-bs-target="#accountManagerModal">
+              <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default" data-bs-toggle="modal"
+                data-bs-target="#accountManagerModal">
                 <span class="mdi mdi-pencil"></span>
                 編輯
               </button>
@@ -91,7 +94,8 @@
               </div>
             </td>
             <td class="text-center w-25">
-              <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default" data-bs-toggle="modal" data-bs-target="#accountManagerModal">
+              <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default" data-bs-toggle="modal"
+                data-bs-target="#accountManagerModal">
                 <span class="mdi mdi-pencil"></span>
                 編輯
               </button>
@@ -110,30 +114,33 @@
               </div>
             </td>
             <td class="text-center w-25">
-              <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default" data-bs-toggle="modal" data-bs-target="#accountManagerModal">
+              <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default" data-bs-toggle="modal"
+                data-bs-target="#accountManagerModal">
                 <span class="mdi mdi-pencil"></span>
                 編輯
               </button>
             </td>
-          </tr>          
+          </tr>
         </tbody>
       </table>
     </div>
   </div>
 
   <!-- accountManagerModal -->
-  <div class="modal fade" id="accountManagerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="accountManagerModalLabel" aria-hidden="true">
+  <div class="modal fade" id="accountManagerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="accountManagerModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content hnb__modal">
         <form id="accountManagerForm">
           <div class="modal-header py-2 border-bottom-0">
             <h5 class="modal-title fs-5 fw-bolder">
               <span id="accountManagerTitle">新增/編輯使用者帳號</span>
-              <span class="ms-2 fs-0-8 hnb__text text-danger">
+              <span class="ms-2 fs-0-8 hnb__text--red text-danger">
                 * 為必填欄位
               </span>
             </h5>
-            <button type="button" class="m-0 p-0 btn-close hnb__btn--close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="m-0 p-0 btn-close hnb__btn--close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
           </div>
           <div class="modal-body bg-light">
             <div class="table-responsive">
@@ -226,7 +233,7 @@
       this[id] = document.querySelector(`#${id}`);
       return this[id];
     });
-    
+
     // 新增
     addItem.addEventListener('click', () => {
       accountManagerTitle.textContent = '新增使用者帳號';
@@ -255,8 +262,8 @@
     // 狀態切換
     switchItem.forEach(item => {
       item.addEventListener('click', (e) => {
-        const  el = e.target;
-        const  elSwitch = el.getAttribute('checked');
+        const el = e.target;
+        const elSwitch = el.getAttribute('checked');
         const info = document.querySelector('#infotext');
         if (elSwitch === '') {
           el.removeAttribute('checked');
@@ -273,10 +280,11 @@
   </script>
 
   <!-- infoModal -->
-  <div class="modal fade" id="infoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+  <div class="modal fade" id="infoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="infoModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content hnb__modal">
-        <div class="modal-body bg-light">            
+        <div class="modal-body bg-light">
           <p id="infotext" class="mb-2 py-3 fs-5 fw-bolder text-center">
             使用者已開啟
           </p>
@@ -305,8 +313,9 @@
   </script>
 
   <!-- 帳號維護 -->
-  <script src="../assets/js/bootstrap.bundle.min.js"></script>  
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/jquery-3.7.1.js"></script>
   <script src="../assets/js/page.js"></script>
 </body>
+
 </html>

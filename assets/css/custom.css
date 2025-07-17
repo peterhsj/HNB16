@@ -10309,8 +10309,11 @@ form {
   color: #b3000e;
   border-left: 5px solid #b3000e;
 }
-.hnb__text {
+.hnb__text--red {
   color: #b3000e;
+}
+.hnb__text--green {
+  color: #13989e;
 }
 .hnb__path {
   color: #b3000e;

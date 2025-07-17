@@ -7,7 +7,7 @@
   <title>華南銀行 - 國內信用狀系統</title>
   <link rel="stylesheet" href="../assets/MaterialDesign-Webfont/css/materialdesignicons.min.css" media="all" />
   <link rel="stylesheet" href="../assets/css/custom.css">
-  
+
   <!-- flatpick plugin -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -67,14 +67,16 @@
                 <div class="col-10 col-md-9">
                   <div class="d-flex align-items-center">
                     <div class="input-group flex-nowrap">
-                      <input type="datetime-local" id="startDate" placeholder="請點選起日" class="form-control form-control-sm hnb__calendar">
+                      <input type="datetime-local" id="startDate" placeholder="請點選起日"
+                        class="form-control form-control-sm hnb__calendar">
                       <label class="input-group-text py-1" for="startDate">
                         <span class="mdi mdi-calendar-month"></span>
                       </label>
                     </div>
                     <span class="px-2">~</span>
                     <div class="input-group flex-nowrap">
-                      <input type="datetime-local" id="endDate" placeholder="請點選訖日" class="form-control form-control-sm hnb__calendar">
+                      <input type="datetime-local" id="endDate" placeholder="請點選訖日"
+                        class="form-control form-control-sm hnb__calendar">
                       <label class="input-group-text py-1" for="endDate">
                         <span class="mdi mdi-calendar-month"></span>
                       </label>
@@ -160,7 +162,7 @@
               <td>使用者帳號新增成功</td>
               <td></td>
               <td>petersun06</td>
-            </tr>          
+            </tr>
           </tbody>
         </table>
         <nav class="mt-3 d-flex align-items-center justify-content-between">
@@ -197,7 +199,7 @@
             </div>
           </div>
           <div class="mb-3">
-            <span class="hnb__text">總筆數：</span>3 / <span class="hnb__text">總頁數：</span>1
+            <span class="hnb__text--red">總筆數：</span>3 / <span class="hnb__text--red">總頁數：</span>1
           </div>
         </nav>
       </div>
@@ -205,7 +207,7 @@
   </div>
   <!-- 存取軌跡紀錄 -->
   <!-- JS -->
-  <script>    
+  <script>
     // 查詢
     const search = document.querySelector('#search');
     const trackList = document.querySelector('#trackList');
@@ -217,7 +219,7 @@
     const dateAlert = document.querySelector(".dateAlert");
     const currentTime = new Date()
     const config = {
-      locale: 'zh_tw', 
+      locale: 'zh_tw',
       //enableTime: true, //可選時與分
       dateFormat: "Y/m/d", //時間格式
       time_24hr: true, //24 時制
@@ -237,23 +239,24 @@
 
     // 辨別結束日期須晚於開始日期
     function checkDateTime(dateStr, id) {
-      if (id === "startDate"){
+      if (id === "startDate") {
         startDateValue = dateStr
       }
-      
-      if (id === "endDate"){
+
+      if (id === "endDate") {
         endDateValue = dateStr
       }
 
-      if (startDateValue > endDateValue){
+      if (startDateValue > endDateValue) {
         dateAlert.classList.remove("d-none");
-      }else{
+      } else {
         dateAlert.classList.add("d-none");
-      }    
+      }
     };
-  </script>  
-  <script src="../assets/js/bootstrap.bundle.min.js"></script>  
+  </script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/jquery-3.7.1.js"></script>
   <script src="../assets/js/page.js"></script>
 </body>
+
 </html>

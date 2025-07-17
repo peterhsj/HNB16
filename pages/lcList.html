@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>華南銀行 - 國內信用狀系統</title>
   <link rel="stylesheet" href="../assets/MaterialDesign-Webfont/css/materialdesignicons.min.css" media="all" />
-  <link rel="stylesheet" href="../assets/css/custom.css">  
-  
+  <link rel="stylesheet" href="../assets/css/custom.css">
+
   <!-- flatpick plugin -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -75,16 +75,18 @@
             <div class="row">
               <label for="appDate" class="col-2 col-md-3 col-form-label text-end text-nowrap">開狀日期</label>
               <div class="col-10 col-md-9">
-                <div class="d-flex align-items-center">                  
+                <div class="d-flex align-items-center">
                   <div class="input-group flex-nowrap">
-                    <input type="datetime-local" id="startDate" placeholder="請點選起日" class="form-control form-control-sm hnb__calendar">
+                    <input type="datetime-local" id="startDate" placeholder="請點選起日"
+                      class="form-control form-control-sm hnb__calendar">
                     <label class="input-group-text py-1" for="startDate">
                       <span class="mdi mdi-calendar-month"></span>
                     </label>
                   </div>
                   <span class="px-2">~</span>
                   <div class="input-group flex-nowrap">
-                    <input type="datetime-local" id="endDate" placeholder="請點選訖日" class="form-control form-control-sm hnb__calendar">
+                    <input type="datetime-local" id="endDate" placeholder="請點選訖日"
+                      class="form-control form-control-sm hnb__calendar">
                     <label class="input-group-text py-1" for="endDate">
                       <span class="mdi mdi-calendar-month"></span>
                     </label>
@@ -153,7 +155,8 @@
                   <td class="text-center">有效</td>
 
                   <td class="text-center">
-                    <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default text-nowrap" data-bs-toggle="modal" data-bs-target="#detailModal">                  
+                    <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default text-nowrap"
+                      data-bs-toggle="modal" data-bs-target="#detailModal">
                       <span class="mdi mdi-note-text"></span>
                       明細
                     </button>
@@ -174,7 +177,8 @@
                   <td class="text-center">到期</td>
 
                   <td class="text-center">
-                    <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default text-nowrap" data-bs-toggle="modal" data-bs-target="#detailModal">                  
+                    <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default text-nowrap"
+                      data-bs-toggle="modal" data-bs-target="#detailModal">
                       <span class="mdi mdi-note-text"></span>
                       明細
                     </button>
@@ -195,7 +199,8 @@
                   <td class="text-center">沖正</td>
 
                   <td class="text-center">
-                    <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default text-nowrap" data-bs-toggle="modal" data-bs-target="#detailModal">                  
+                    <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default text-nowrap"
+                      data-bs-toggle="modal" data-bs-target="#detailModal">
                       <span class="mdi mdi-note-text"></span>
                       明細
                     </button>
@@ -240,14 +245,15 @@
           </div>
         </div>
         <div class="mb-3">
-          <span class="hnb__text">總筆數：</span>3 / <span class="hnb__text">總頁數：</span>1
+          <span class="hnb__text--red">總筆數：</span>3 / <span class="hnb__text--red">總頁數：</span>1
         </div>
       </nav>
     </div>
   </div>
   <!-- 查詢信用狀資料 -->
-   <!-- detailModal -->
-  <div class="modal fade" id="detailModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+  <!-- detailModal -->
+  <div class="modal fade" id="detailModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="detailModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content hnb__modal">
         <form id="accountManagerForm">
@@ -255,7 +261,8 @@
             <h5 class="modal-title fs-5 fw-bolder" id="detailModalLabel">
               信用狀詳細資訊
             </h5>
-            <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal" aria-label="Close">
+            <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal"
+              aria-label="Close">
               <span class="mdi mdi-close"></span>
             </button>
           </div>
@@ -485,7 +492,7 @@
     const dateAlert = document.querySelector(".dateAlert");
     const currentTime = new Date()
     const config = {
-      locale: 'zh_tw', 
+      locale: 'zh_tw',
       //enableTime: true, //可選時與分
       dateFormat: "Y/m/d", //時間格式
       time_24hr: true, //24 時制
@@ -505,23 +512,24 @@
 
     // 辨別結束日期須晚於開始日期
     function checkDateTime(dateStr, id) {
-      if (id === "startDate"){
+      if (id === "startDate") {
         startDateValue = dateStr
       }
-      
-      if (id === "endDate"){
+
+      if (id === "endDate") {
         endDateValue = dateStr
       }
 
-      if (startDateValue > endDateValue){
+      if (startDateValue > endDateValue) {
         dateAlert.classList.remove("d-none");
-      }else{
+      } else {
         dateAlert.classList.add("d-none");
-      }    
+      }
     };    
   </script>
-  <script src="../assets/js/bootstrap.bundle.min.js"></script>  
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/jquery-3.7.1.js"></script>
   <script src="../assets/js/page.js"></script>
 </body>
+
 </html>

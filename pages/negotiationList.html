@@ -7,7 +7,7 @@
   <title>華南銀行 - 國內信用狀系統</title>
   <link rel="stylesheet" href="../assets/MaterialDesign-Webfont/css/materialdesignicons.min.css" media="all" />
   <link rel="stylesheet" href="../assets/css/custom.css">
-  
+
   <!-- flatpick plugin -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -53,21 +53,23 @@
                 <input type="text" class="form-control form-control-sm" id="beneInNo">
               </div>
             </div>
-          </div>          
+          </div>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="mb-3 row">
               <label for="appDate" class="col-2 col-md-3 col-form-label text-end text-nowrap">押匯日期</label>
               <div class="col-10 col-md-9">
                 <div class="d-flex align-items-center">
                   <div class="input-group flex-nowrap">
-                    <input type="datetime-local" id="startDate" placeholder="請點選起日" class="form-control form-control-sm hnb__calendar">
+                    <input type="datetime-local" id="startDate" placeholder="請點選起日"
+                      class="form-control form-control-sm hnb__calendar">
                     <label class="input-group-text py-1" for="startDate">
                       <span class="mdi mdi-calendar-month"></span>
                     </label>
                   </div>
                   <span class="px-2">~</span>
                   <div class="input-group flex-nowrap">
-                    <input type="datetime-local" id="endDate" placeholder="請點選訖日" class="form-control form-control-sm hnb__calendar">
+                    <input type="datetime-local" id="endDate" placeholder="請點選訖日"
+                      class="form-control form-control-sm hnb__calendar">
                     <label class="input-group-text py-1" for="endDate">
                       <span class="mdi mdi-calendar-month"></span>
                     </label>
@@ -127,7 +129,8 @@
             <tr>
               <td class="text-center">2025/02/07</td>
               <td class="text-center">
-                <a href="javascript:void(0)" class="hnb__link--text" data-bs-toggle="modal" data-bs-target="#draftModal">
+                <a href="javascript:void(0)" class="hnb__link--text" data-bs-toggle="modal"
+                  data-bs-target="#draftModal">
                   JF24111101
                 </a>
               </td>
@@ -148,10 +151,11 @@
               </td>
               <td>
                 <div class="py-1">LC113A-99123</div>
-                <div class="py-1">2025/02/09</div>                
+                <div class="py-1">2025/02/09</div>
               </td>
               <td class="text-center">
-                <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default text-nowrap" data-bs-toggle="modal" data-bs-target="#detailModal">                  
+                <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default text-nowrap"
+                  data-bs-toggle="modal" data-bs-target="#detailModal">
                   <span class="mdi mdi-note-text"></span>
                   明細
                 </button>
@@ -160,7 +164,8 @@
             <tr>
               <td class="text-center">2025/02/07</td>
               <td class="text-center">
-                <a href="javascript:void(0)" class="hnb__link--text" data-bs-toggle="modal" data-bs-target="#draftModal">
+                <a href="javascript:void(0)" class="hnb__link--text" data-bs-toggle="modal"
+                  data-bs-target="#draftModal">
                   JF24111102
                 </a>
               </td>
@@ -181,10 +186,11 @@
               </td>
               <td>
                 <div class="py-1">LC113A-99124</div>
-                <div class="py-1">2025/02/09</div>                
+                <div class="py-1">2025/02/09</div>
               </td>
               <td class="text-center">
-                <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default text-nowrap" data-bs-toggle="modal" data-bs-target="#detailModal">                  
+                <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default text-nowrap"
+                  data-bs-toggle="modal" data-bs-target="#detailModal">
                   <span class="mdi mdi-note-text"></span>
                   明細
                 </button>
@@ -226,14 +232,15 @@
           </div>
         </div>
         <div class="mb-3">
-          <span class="hnb__text">總筆數：</span>2 / <span class="hnb__text">總頁數：</span>1
+          <span class="hnb__text--red">總筆數：</span>2 / <span class="hnb__text--red">總頁數：</span>1
         </div>
       </nav>
     </div>
   </div>
   <!-- 查詢押匯資料 -->
   <!-- detailModal -->
-  <div class="modal fade" id="detailModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+  <div class="modal fade" id="detailModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="detailModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content hnb__modal">
         <form id="accountManagerForm">
@@ -241,7 +248,8 @@
             <h5 class="modal-title fs-5 fw-bolder" id="detailModalLabel">
               押匯申請詳細資訊
             </h5>
-            <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal" aria-label="Close">
+            <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal"
+              aria-label="Close">
               <span class="mdi mdi-close"></span>
             </button>
           </div>
@@ -316,7 +324,7 @@
                     </td>
                     <th class="hnb__tbhd2 text-nowrap w-15">銀行名稱</th>
                     <td class="bg-white">
-                    富邦銀行
+                      富邦銀行
                     </td>
                   </tr>
                   <tr>
@@ -436,7 +444,7 @@
                     </td>
                     <th class="hnb__tbhd2 text-nowrap w-15"></th>
                     <td class="bg-white">
-                      
+
                     </td>
                   </tr>
                 </tbody>
@@ -453,7 +461,8 @@
 
   <!-- 匯票資訊 -->
   <!-- rdaftModal -->
-  <div class="modal fade" id="draftModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="draftModalLabel" aria-hidden="true">
+  <div class="modal fade" id="draftModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="draftModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content hnb__modal">
         <div class="modal-header py-2 border-bottom-0">
@@ -467,21 +476,24 @@
         <div class="modal-body bg-light">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link hnb__tab active" id="draft1-tab" data-bs-toggle="tab" data-bs-target="#draft1" type="button" role="tab" aria-controls="draft1" aria-selected="true">
+              <button class="nav-link hnb__tab active" id="draft1-tab" data-bs-toggle="tab" data-bs-target="#draft1"
+                type="button" role="tab" aria-controls="draft1" aria-selected="true">
                 受益人匯款資料
               </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link hnb__tab" id="draft2-tab" data-bs-toggle="tab" data-bs-target="#draft2" type="button" role="tab" aria-controls="draft2" aria-selected="false">
+              <button class="nav-link hnb__tab" id="draft2-tab" data-bs-toggle="tab" data-bs-target="#draft2"
+                type="button" role="tab" aria-controls="draft2" aria-selected="false">
                 匯票付款申請書
               </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link hnb__tab" id="draft3-tab" data-bs-toggle="tab" data-bs-target="#draft3" type="button" role="tab" aria-controls="draft3" aria-selected="false">
+              <button class="nav-link hnb__tab" id="draft3-tab" data-bs-toggle="tab" data-bs-target="#draft3"
+                type="button" role="tab" aria-controls="draft3" aria-selected="false">
                 發票
               </button>
             </li>
-          </ul>          
+          </ul>
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="draft1" role="tabpanel" aria-labelledby="draft1-tab">
               <div class="card rounded-0 rounded-bottom">
@@ -580,7 +592,7 @@
                   </div>
                   <div class="modal-footer justify-content-center border-top mt-3 pb-0">
                     <button type="button" class="px-3 btn border-1 hnb__btn--cancel" data-bs-dismiss="modal">關閉</button>
-                  </div>                  
+                  </div>
                 </div>
               </div>
             </div>
@@ -601,42 +613,44 @@
                       <div class="mb-1">
                         <span>買受人統一編號：07066907</span>
                         <span class="ps-5">買受人名稱：台灣塑膠工業股份有限公司</span>
-                      </span>
-                      <div class="mb-1">買受人地址：台北市中正區南海路100號20樓</div>
-                    </div>
-                    <div class="table-responsive bg-white">
-                      <table class="mb-0 table table-striped table-sm hnb__table--print">
-                        <thead>
-                          <tr>
-                            <th scope="col" class="hnb__tbhd">統一發票號碼</th>
-                            <th scope="col" class="hnb__tbhd">統一發票開立日期</th>
-                            <th scope="col" class="hnb__tbhd">統一發票金額</th>
-                            <th scope="col" class="hnb__tbhd">貨品內容</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="text-nowrap">EP00012345</td>
-                            <td class="text-nowrap">中華民國110年07月02日</td>
-                            <td class="text-nowrap">
-                              新台幣 壹仟元整
-                              <br>
-                              (TWD 1,000)
-                            </td>
-                            <td>20250825_台塑開狀或物名稱測試_201</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="py-2 text-end">
-                      <div>
-                        <span class="hnb__text">小計：</span>1 筆發票 / TWD 1,000
-                        <span class="hnb__text ps-3">總計：</span>1 筆發票 / TWD 1,000
+                        </span>
+                        <div class="mb-1">買受人地址：台北市中正區南海路100號20樓</div>
+                      </div>
+                      <div class="table-responsive bg-white">
+                        <table class="mb-0 table table-striped table-sm hnb__table--print">
+                          <thead>
+                            <tr>
+                              <th scope="col" class="hnb__tbhd">統一發票號碼</th>
+                              <th scope="col" class="hnb__tbhd">統一發票開立日期</th>
+                              <th scope="col" class="hnb__tbhd">統一發票金額</th>
+                              <th scope="col" class="hnb__tbhd">貨品內容</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="text-nowrap">EP00012345</td>
+                              <td class="text-nowrap">中華民國110年07月02日</td>
+                              <td class="text-nowrap">
+                                新台幣 壹仟元整
+                                <br>
+                                (TWD 1,000)
+                              </td>
+                              <td>20250825_台塑開狀或物名稱測試_201</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="py-2 text-end">
+                        <div>
+                          <span class="hnb__text--red">小計：</span>1 筆發票 / TWD 1,000
+                          <span class="hnb__text--red ps-3">總計：</span>1 筆發票 / TWD 1,000
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="modal-footer justify-content-center border-top mt-3 pb-0">
-                    <button type="button" class="px-3 btn border-1 hnb__btn--cancel" data-bs-dismiss="modal">關閉</button>
+                    <div class="modal-footer justify-content-center border-top mt-3 pb-0">
+                      <button type="button" class="px-3 btn border-1 hnb__btn--cancel"
+                        data-bs-dismiss="modal">關閉</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -645,57 +659,57 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- JS -->
-  <script>
-    // 查詢
-    const search = document.querySelector('#search');
-    const setLcList = document.querySelector('#setLcList');
-    search.addEventListener('click', () => {
-      setLcList.classList.remove('hnb__hide')
-    });
+    <!-- JS -->
+    <script>
+      // 查詢
+      const search = document.querySelector('#search');
+      const setLcList = document.querySelector('#setLcList');
+      search.addEventListener('click', () => {
+        setLcList.classList.remove('hnb__hide')
+      });
 
-    // 月曆
-    const dateAlert = document.querySelector(".dateAlert");
-    const currentTime = new Date()
-    const config = {
-      locale: 'zh_tw', 
-      //enableTime: true, //可選時與分
-      dateFormat: "Y/m/d", //時間格式
-      time_24hr: true, //24 時制
-      minuteIncrement: 15, //分鐘每次選擇間隔單位
-      allowInput: true, //可輸入控制
-      //minDate: "today", //可選最小時間，可直接接受 'today' 字串
-      //maxDate: currentTime.setMonth(currentTime.getMonth() + 1), //可選最大時間，從今天起一個月
-      onChange: function (selectedDates, dateStr, instance) {
-        console.log(`你現在點選的是 ${instance.input.id}，時間為 ${selectedDates} / ${dateStr}`);
-        checkDateTime(dateStr, instance.input.id);
-      }
-    };
-    flatpickr('#startDate, #endDate', config);
+      // 月曆
+      const dateAlert = document.querySelector(".dateAlert");
+      const currentTime = new Date()
+      const config = {
+        locale: 'zh_tw',
+        //enableTime: true, //可選時與分
+        dateFormat: "Y/m/d", //時間格式
+        time_24hr: true, //24 時制
+        minuteIncrement: 15, //分鐘每次選擇間隔單位
+        allowInput: true, //可輸入控制
+        //minDate: "today", //可選最小時間，可直接接受 'today' 字串
+        //maxDate: currentTime.setMonth(currentTime.getMonth() + 1), //可選最大時間，從今天起一個月
+        onChange: function (selectedDates, dateStr, instance) {
+          console.log(`你現在點選的是 ${instance.input.id}，時間為 ${selectedDates} / ${dateStr}`);
+          checkDateTime(dateStr, instance.input.id);
+        }
+      };
+      flatpickr('#startDate, #endDate', config);
 
-    let startDateValue = null
-    let endDateValue = null
+      let startDateValue = null
+      let endDateValue = null
 
-    // 辨別結束日期須晚於開始日期
-    function checkDateTime(dateStr, id) {
-      if (id === "startDate"){
-        startDateValue = dateStr
-      }
-      
-      if (id === "endDate"){
-        endDateValue = dateStr
-      }
+      // 辨別結束日期須晚於開始日期
+      function checkDateTime(dateStr, id) {
+        if (id === "startDate") {
+          startDateValue = dateStr
+        }
 
-      if (startDateValue > endDateValue){
-        dateAlert.classList.remove("d-none");
-      }else{
-        dateAlert.classList.add("d-none");
-      }    
-    };
-  </script>  
-  <script src="../assets/js/bootstrap.bundle.min.js"></script>  
-  <script src="../assets/js/jquery-3.7.1.js"></script>
-  <script src="../assets/js/page.js"></script>
+        if (id === "endDate") {
+          endDateValue = dateStr
+        }
+
+        if (startDateValue > endDateValue) {
+          dateAlert.classList.remove("d-none");
+        } else {
+          dateAlert.classList.add("d-none");
+        }
+      };
+    </script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.7.1.js"></script>
+    <script src="../assets/js/page.js"></script>
 </body>
+
 </html>

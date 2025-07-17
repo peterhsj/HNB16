@@ -23,11 +23,12 @@
     </nav>
     <h1 class="pt-4 pb-2 fs-4 fw-bolder">傳送失敗紀錄</h1>
     <div class="py-2">
-      <button type="button" id="reSendItem" class="px-3 btn btn-sm hnb__btn--default" data-bs-toggle="modal" data-bs-target="#resendModal">
+      <button type="button" id="reSendItem" class="px-3 btn btn-sm hnb__btn--default" data-bs-toggle="modal"
+        data-bs-target="#resendModal">
         <span class="mdi mdi-refresh"></span>
         重送
       </button>
-      <span class="ms-2 hnb__text">
+      <span class="ms-2 hnb__text--red">
         請勾選欲重送之訊息
       </span>
     </div>
@@ -50,7 +51,8 @@
               <input class="form-check-input" type="checkbox" id="check1" value="1">
             </td>
             <td class="text-center">信用狀通知</td>
-            <td><a href="javascript:void(0)" class="hnb__link--text" onclick="lcModalHandler()">ATAT5LS0000123-001</a></td>
+            <td><a href="javascript:void(0)" class="hnb__link--text" onclick="lcModalHandler()">ATAT5LS0000123-001</a>
+            </td>
             <td class="text-center">2025/02/07 16:50:21</td>
             <td>重送發生錯誤，請洽系統管理員</td>
           </tr>
@@ -107,7 +109,7 @@
           </div>
         </div>
         <div class="mb-3">
-          <span class="hnb__text">總筆數：</span>3 / <span class="hnb__text">總頁數：</span>1
+          <span class="hnb__text--red">總筆數：</span>3 / <span class="hnb__text--red">總頁數：</span>1
         </div>
       </nav>
     </div>
@@ -148,7 +150,8 @@
                 <tr>
                   <td class="text-center">2025/02/07</td>
                   <td class="text-center">
-                    <a href="javascript:void(0)" class="hnb__link--text" data-bs-toggle="modal" data-bs-target="#draftModalSub">
+                    <a href="javascript:void(0)" class="hnb__link--text" data-bs-toggle="modal"
+                      data-bs-target="#draftModalSub">
                       JF24111101
                     </a>
                   </td>
@@ -164,10 +167,11 @@
                   </td>
                   <td>
                     <div class="py-1">LC113A-99123</div>
-                    <div class="py-1">2025/02/09</div>                
+                    <div class="py-1">2025/02/09</div>
                   </td>
                   <td class="text-center">
-                    <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default" data-bs-toggle="modal" data-bs-target="#detailModalSub">                  
+                    <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default" data-bs-toggle="modal"
+                      data-bs-target="#detailModalSub">
                       <span class="mdi mdi-note-text"></span>
                       明細
                     </button>
@@ -186,7 +190,8 @@
 
   <!-- 匯票資訊 -->
   <!-- draftModalSub -->
-  <div class="modal fade" id="draftModalSub" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="draftModalLabelSub" aria-hidden="true">
+  <div class="modal fade" id="draftModalSub" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="draftModalLabelSub" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content hnb__modal">
         <div class="modal-header py-2 border-bottom-0">
@@ -200,21 +205,24 @@
         <div class="modal-body bg-light">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link hnb__tab active" id="draft1-tab" data-bs-toggle="tab" data-bs-target="#draft1" type="button" role="tab" aria-controls="draft1" aria-selected="true">
+              <button class="nav-link hnb__tab active" id="draft1-tab" data-bs-toggle="tab" data-bs-target="#draft1"
+                type="button" role="tab" aria-controls="draft1" aria-selected="true">
                 受益人匯款資料
               </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link hnb__tab" id="draft2-tab" data-bs-toggle="tab" data-bs-target="#draft2" type="button" role="tab" aria-controls="draft2" aria-selected="false">
+              <button class="nav-link hnb__tab" id="draft2-tab" data-bs-toggle="tab" data-bs-target="#draft2"
+                type="button" role="tab" aria-controls="draft2" aria-selected="false">
                 匯票付款申請書
               </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link hnb__tab" id="draft3-tab" data-bs-toggle="tab" data-bs-target="#draft3" type="button" role="tab" aria-controls="draft3" aria-selected="false">
+              <button class="nav-link hnb__tab" id="draft3-tab" data-bs-toggle="tab" data-bs-target="#draft3"
+                type="button" role="tab" aria-controls="draft3" aria-selected="false">
                 發票
               </button>
             </li>
-          </ul>          
+          </ul>
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="draft1" role="tabpanel" aria-labelledby="draft1-tab">
               <div class="card rounded-0 rounded-bottom">
@@ -245,7 +253,8 @@
                     </table>
                   </div>
                   <div class="modal-footer justify-content-center border-top mt-3 pb-0">
-                    <button type="button" class="px-3 btn border-1 hnb__btn--cancel" data-bs-toggle="modal" data-bs-target="#negoModal">關閉</button>
+                    <button type="button" class="px-3 btn border-1 hnb__btn--cancel" data-bs-toggle="modal"
+                      data-bs-target="#negoModal">關閉</button>
                   </div>
                 </div>
               </div>
@@ -312,8 +321,9 @@
                     </div>
                   </div>
                   <div class="modal-footer justify-content-center border-top mt-3 pb-0">
-                    <button type="button" class="px-3 btn border-1 hnb__btn--cancel" data-bs-toggle="modal" data-bs-target="#negoModal">關閉</button>
-                  </div>                  
+                    <button type="button" class="px-3 btn border-1 hnb__btn--cancel" data-bs-toggle="modal"
+                      data-bs-target="#negoModal">關閉</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -334,43 +344,44 @@
                       <div class="mb-1">
                         <span>買受人統一編號：07066907</span>
                         <span class="ps-5">買受人名稱：台灣塑膠工業股份有限公司</span>
-                      </span>
-                      <div class="mb-1">買受人地址：台北市中正區南海路100號20樓</div>
-                    </div>
-                    <div class="table-responsive bg-white">
-                      <table class="mb-0 table table-striped table-sm hnb__table--print">
-                        <thead>
-                          <tr>
-                            <th scope="col" class="hnb__tbhd">統一發票號碼</th>
-                            <th scope="col" class="hnb__tbhd">統一發票開立日期</th>
-                            <th scope="col" class="hnb__tbhd">統一發票金額</th>
-                            <th scope="col" class="hnb__tbhd">貨品內容</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="text-nowrap">EP00012345</td>
-                            <td class="text-nowrap">中華民國110年07月02日</td>
-                            <td class="text-nowrap">
-                              新台幣 壹仟元整
-                              <br>
-                              (TWD 1,000)
-                            </td>
-                            <td>20250825_台塑開狀或物名稱測試_201</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="py-2 text-end">
-                      <div>
-                        <span class="hnb__text">小計：</span>1 筆發票 / TWD 1,000
-                        <span class="hnb__text ps-3">總計：</span>1 筆發票 / TWD 1,000
+                        </span>
+                        <div class="mb-1">買受人地址：台北市中正區南海路100號20樓</div>
+                      </div>
+                      <div class="table-responsive bg-white">
+                        <table class="mb-0 table table-striped table-sm hnb__table--print">
+                          <thead>
+                            <tr>
+                              <th scope="col" class="hnb__tbhd">統一發票號碼</th>
+                              <th scope="col" class="hnb__tbhd">統一發票開立日期</th>
+                              <th scope="col" class="hnb__tbhd">統一發票金額</th>
+                              <th scope="col" class="hnb__tbhd">貨品內容</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="text-nowrap">EP00012345</td>
+                              <td class="text-nowrap">中華民國110年07月02日</td>
+                              <td class="text-nowrap">
+                                新台幣 壹仟元整
+                                <br>
+                                (TWD 1,000)
+                              </td>
+                              <td>20250825_台塑開狀或物名稱測試_201</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="py-2 text-end">
+                        <div>
+                          <span class="hnb__text--red">小計：</span>1 筆發票 / TWD 1,000
+                          <span class="hnb__text--red ps-3">總計：</span>1 筆發票 / TWD 1,000
+                        </div>
                       </div>
                     </div>
                   </div>
-                  </div>
                   <div class="modal-footer justify-content-center border-top mt-3 pb-0">
-                    <button type="button" class="px-3 btn border-1 hnb__btn--cancel" data-bs-toggle="modal" data-bs-target="#negoModal">關閉</button>
+                    <button type="button" class="px-3 btn border-1 hnb__btn--cancel" data-bs-toggle="modal"
+                      data-bs-target="#negoModal">關閉</button>
                   </div>
                 </div>
               </div>
@@ -383,7 +394,8 @@
 
   <!-- 查詢押匯資料 -->
   <!-- detailModalSub -->
-  <div class="modal fade" id="detailModalSub" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="detailModalSubLabel" aria-hidden="true">
+  <div class="modal fade" id="detailModalSub" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="detailModalSubLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content hnb__modal">
         <form id="accountManagerForm">
@@ -391,7 +403,8 @@
             <h5 class="modal-title fs-5 fw-bolder" id="detailModalSubLabel">
               押匯申請詳細資訊
             </h5>
-            <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" aria-label="Close" data-bs-toggle="modal" data-bs-target="#negoModal">
+            <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" aria-label="Close" data-bs-toggle="modal"
+              data-bs-target="#negoModal">
               <span class="mdi mdi-close"></span>
             </button>
           </div>
@@ -466,7 +479,7 @@
                     </td>
                     <th class="hnb__tbhd2 text-nowrap w-15">銀行名稱</th>
                     <td class="bg-white">
-                    富邦銀行
+                      富邦銀行
                     </td>
                   </tr>
                   <tr>
@@ -586,7 +599,7 @@
                     </td>
                     <th class="hnb__tbhd2 text-nowrap w-15"></th>
                     <td class="bg-white">
-                      
+
                     </td>
                   </tr>
                 </tbody>
@@ -594,15 +607,16 @@
             </div>
           </div>
           <div class="modal-footer justify-content-center border-top-0">
-            <button type="button" class="px-3 btn border-1 hnb__btn--cancel" data-bs-toggle="modal" data-bs-target="#negoModal">關閉</button>
+            <button type="button" class="px-3 btn border-1 hnb__btn--cancel" data-bs-toggle="modal"
+              data-bs-target="#negoModal">關閉</button>
           </div>
         </form>
       </div>
     </div>
-  </div>  
+  </div>
 
   <!-- 信用狀資訊 lcModal -->
-   <div class="modal fade" id="lcModal" tabindex="-1" aria-labelledby="lcModalLabel" aria-hidden="true">
+  <div class="modal fade" id="lcModal" tabindex="-1" aria-labelledby="lcModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content hnb__modal">
         <div class="modal-header px-5">
@@ -613,44 +627,45 @@
         </div>
         <div class="modal-body bg-light px-5">
           <div class="table-responsive">
-        <table class="mb-0 table table-striped table-sm hnb__table">
-          <thead>
-            <tr>
-              <th scope="col" class="hnb__tbhd text-nowrap">開狀銀行</th>
-              <th scope="col" class="hnb__tbhd text-nowrap">申請人統編</th>
-              <th scope="col" class="hnb__tbhd">信用狀號碼</th>
-              <th scope="col" class="hnb__tbhd">信用狀序號</th>
-              <th scope="col" class="hnb__tbhd">幣別 / 金額</th>
-              <th scope="col" class="hnb__tbhd text-nowrap">開狀日期</th>
-              <th scope="col" class="hnb__tbhd text-nowrap">信用狀狀態</th>
-              <th scope="col" class="hnb__tbhd">功能</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-center">台北分行</td>
-              <td class="text-center">12345678</td>
-              <td class="text-center">ATAT5LS0000123-001</td>
-              <td class="text-center">A12346678001</td>
-              <td>
-                <div class="d-flex justify-content-between">
-                  <span class="me-2">TWD</span>
-                  <span>$20,000.00</span>
-                </div>
-              </td>
-              <td class="text-center">2025/01/20</td>
-              <td class="text-center">有效</td>
+            <table class="mb-0 table table-striped table-sm hnb__table">
+              <thead>
+                <tr>
+                  <th scope="col" class="hnb__tbhd text-nowrap">開狀銀行</th>
+                  <th scope="col" class="hnb__tbhd text-nowrap">申請人統編</th>
+                  <th scope="col" class="hnb__tbhd">信用狀號碼</th>
+                  <th scope="col" class="hnb__tbhd">信用狀序號</th>
+                  <th scope="col" class="hnb__tbhd">幣別 / 金額</th>
+                  <th scope="col" class="hnb__tbhd text-nowrap">開狀日期</th>
+                  <th scope="col" class="hnb__tbhd text-nowrap">信用狀狀態</th>
+                  <th scope="col" class="hnb__tbhd">功能</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">台北分行</td>
+                  <td class="text-center">12345678</td>
+                  <td class="text-center">ATAT5LS0000123-001</td>
+                  <td class="text-center">A12346678001</td>
+                  <td>
+                    <div class="d-flex justify-content-between">
+                      <span class="me-2">TWD</span>
+                      <span>$20,000.00</span>
+                    </div>
+                  </td>
+                  <td class="text-center">2025/01/20</td>
+                  <td class="text-center">有效</td>
 
-              <td class="text-center">
-                <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default text-nowrap" data-bs-toggle="modal" data-bs-target="#lcDetailModal">                  
-                  <span class="mdi mdi-note-text"></span>
-                  明細
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+                  <td class="text-center">
+                    <button type="button" class="editItem my-1 px-3 btn btn-sm hnb__btn--default text-nowrap"
+                      data-bs-toggle="modal" data-bs-target="#lcDetailModal">
+                      <span class="mdi mdi-note-text"></span>
+                      明細
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         <div class="modal-footer justify-content-center border-top-0">
           <button type="button" class="px-3 btn border-1 hnb__btn--cancel" data-bs-dismiss="modal">關閉</button>
@@ -660,15 +675,17 @@
   </div>
 
   <!-- 信用狀詳細資料 lcDetailModal -->
-  <div class="modal fade" id="lcDetailModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="lcDetailModalLabel" aria-hidden="true">
+  <div class="modal fade" id="lcDetailModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="lcDetailModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content hnb__modal">
         <form id="accountManagerForm">
           <div class="modal-header py-2 border-bottom-0">
             <h5 class="modal-title fs-5 fw-bolder" id="lcDetailModalLabel">
               信用狀詳細資訊
-            </h5>            
-            <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" aria-label="Close" data-bs-toggle="modal" data-bs-target="#lcModal">
+            </h5>
+            <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" aria-label="Close" data-bs-toggle="modal"
+              data-bs-target="#lcModal">
               <span class="mdi mdi-close"></span>
             </button>
           </div>
@@ -879,18 +896,20 @@
             </div>
           </div>
           <div class="modal-footer justify-content-center border-top-0">
-            <button type="button" class="px-3 btn border-1 hnb__btn--cancel" data-bs-toggle="modal" data-bs-target="#lcModal">關閉</button>
+            <button type="button" class="px-3 btn border-1 hnb__btn--cancel" data-bs-toggle="modal"
+              data-bs-target="#lcModal">關閉</button>
           </div>
         </form>
       </div>
     </div>
   </div>
-  
+
   <!-- resendModal -->
-  <div class="modal fade" id="resendModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="resendModalLabel" aria-hidden="true">
+  <div class="modal fade" id="resendModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="resendModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content hnb__modal">
-        <div class="modal-body bg-light">            
+        <div class="modal-body bg-light">
           <p id="delText" class="mb-2 py-3 fs-5 fw-bolder text-center">
             訊息已重送
           </p>
@@ -901,21 +920,22 @@
       </div>
     </div>
   </div>
-  
+
   <!-- JS -->
   <script>
-    function negeModalHandler () {
-        const negoModal = document.querySelector('#negoModal');
-        $(negoModal).modal('show');
+    function negeModalHandler() {
+      const negoModal = document.querySelector('#negoModal');
+      $(negoModal).modal('show');
     };
-    
-    function lcModalHandler () {
-        const lcModal = document.querySelector('#lcModal');
-        $(lcModal).modal('show');
+
+    function lcModalHandler() {
+      const lcModal = document.querySelector('#lcModal');
+      $(lcModal).modal('show');
     };
   </script>
-  <script src="../assets/js/bootstrap.bundle.min.js"></script>  
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/jquery-3.7.1.js"></script>
   <script src="../assets/js/page.js"></script>
 </body>
+
 </html>
