@@ -10170,49 +10170,9 @@ footer {
   color: #ffffff;
 }
 
-h1, .h1 {
+h1, .h1,
+.text--hnb {
   color: #b3000e;
-}
-
-/*
- * 登入頁面
- */
-.hnb__signin-wrapper {
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #f2f4f5;
-  background-image: url(../../assets/images/bg-1.png), url(../../assets/images/bg-2.png);
-  background-repeat: no-repeat;
-  background-position: bottom left, top right;
-  background-size: 900px auto, 1200px auto;
-}
-.hnb__signin--form {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
-}
-.hnb__signin--form .checkbox {
-  font-weight: 400;
-}
-.hnb__signin--form .form-floating:focus-within {
-  z-index: 2;
-}
-.hnb__signin--form input[type=text] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.hnb__signin--form input[type=password] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-.hnb__signin--form .logo {
-  width: 200px;
 }
 
 /*
@@ -10221,16 +10181,13 @@ h1, .h1 {
 .sidebar {
   position: fixed;
   top: 0;
-  /* rtl:raw:
-  right: 0;
-  */
-  bottom: 0;
-  /* rtl:remove */
   left: 0;
   z-index: 100;
   /* Behind the navbar */
-  padding: 70px 0 32px;
+  margin: 70px 0 32px;
   width: 275px;
+  height: calc(100% - 102px);
+  overflow-y: auto;
   /* Height of navbar */
   background-color: #e6e6e6;
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
@@ -10297,6 +10254,53 @@ h1, .h1 {
   font-size: 0.8rem !important;
 }
 
+form {
+  height: 100%;
+  width: 100%;
+}
+
+.hnb {
+  /*
+   * 登入頁面
+   */
+}
+.hnb__signin-wrapper {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f2f4f5;
+  background-image: url(../../assets/images/bg-1.png), url(../../assets/images/bg-2.png);
+  background-repeat: no-repeat;
+  background-position: bottom left, top right;
+  background-size: 900px auto, 1200px auto;
+}
+.hnb__signin--form {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.hnb__signin--form .checkbox {
+  font-weight: 400;
+}
+.hnb__signin--form .form-floating:focus-within {
+  z-index: 2;
+}
+.hnb__signin--form input[type=text] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.hnb__signin--form input[type=password] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.hnb__signin--form .logo {
+  width: 200px;
+}
 .hnb__logo img {
   width: 175px;
 }
@@ -10386,9 +10390,12 @@ h1, .h1 {
 .hnb__list {
   color: #b3000e;
 }
+.hnb__list--ol {
+  padding-left: 2rem;
+  list-style: auto;
+}
 .hnb__table {
   border: 1px solid #a6c2d1;
-  border-bottom: 2px #a6c2d1 solid;
 }
 .hnb__table th,
 .hnb__table td {
@@ -10482,6 +10489,15 @@ h1, .h1 {
   background-color: #2fbcc2;
   color: #ffffff;
 }
+.hnb__btn--print {
+  background-color: #e49116;
+  border: 1px solid #e49116;
+  color: #ffffff;
+}
+.hnb__btn--print:hover {
+  background-color: #eea230;
+  color: #ffffff;
+}
 .hnb__btn--close {
   color: #b3000e;
   font-size: 30px;
@@ -10531,14 +10547,41 @@ h1, .h1 {
   border-radius: 1.25rem;
   padding: 0rem;
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.15);
-  position: relative;
 }
 .hnb__hide {
   display: none;
 }
+.hnb__bankName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 標楷體;
+}
+.hnb__image--draft {
+  position: absolute;
+  right: 25px;
+  bottom: 0;
+  width: 120px;
+}
+.hnb__address--draft {
+  min-width: 120px;
+}
+.hnb__bg--yellow {
+  background-color: #FFFFCC;
+}
+.hnb__bg--white {
+  background-color: #FFFFFF;
+}
 
 .page-width {
   width: 150px;
+}
+
+.w-40 {
+  width: 40% !important;
+}
+
+.w-30 {
+  width: 30% !important;
 }
 
 .w-20 {
