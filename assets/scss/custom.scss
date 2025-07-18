@@ -341,9 +341,9 @@ form {
   }
 
   &__tbhd2 {
-    background-color: #13989e !important;
+    background-color: #e7f7f8 !important;
     //background-color: #eef2f4 !important;
-    color: #ffffff;
+    //color: #ffffff;
     text-align: right;
     font-weight: 400;
   }
@@ -484,6 +484,10 @@ form {
         background-color: #46c8ce;
         border-color: #46c8ce;
       }
+    }
+
+    &__hide {
+      display: none;
     }
   }
 

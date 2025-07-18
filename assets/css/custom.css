@@ -10436,8 +10436,7 @@ form {
   background-color: #13989e !important;
 }
 .hnb__tbhd2 {
-  background-color: #13989e !important;
-  color: #ffffff;
+  background-color: #e7f7f8 !important;
   text-align: right;
   font-weight: 400;
 }
@@ -10541,6 +10540,9 @@ form {
   color: #ffffff;
   background-color: #46c8ce;
   border-color: #46c8ce;
+}
+.hnb__menu__hide {
+  display: none;
 }
 .hnb__calendar {
   min-width: 100px !important;
