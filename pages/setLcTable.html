@@ -7,7 +7,7 @@
   <title>華南銀行 - 國內信用狀系統</title>
   <link rel="stylesheet" href="../assets/MaterialDesign-Webfont/css/materialdesignicons.min.css" media="all" />
   <link rel="stylesheet" href="../assets/css/custom.css">
-  
+
   <!-- flatpick plugin -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css">
@@ -82,14 +82,16 @@
               <div class="col-10 col-md-9">
                 <div class="d-flex align-items-center">
                   <div class="input-group flex-nowrap">
-                    <input type="datetime-local" id="startDate" placeholder="請點選起始月份" class="form-control form-control-sm hnb__calendar">
+                    <input type="datetime-local" id="startDate" placeholder="請點選起始月份"
+                      class="form-control form-control-sm hnb__calendar">
                     <label class="input-group-text py-1" for="startDate">
                       <span class="mdi mdi-calendar-month"></span>
                     </label>
                   </div>
                   <span class="px-2">~</span>
                   <div class="input-group flex-nowrap">
-                    <input type="datetime-local" id="endDate" placeholder="請點選結束月份" class="form-control form-control-sm hnb__calendar">
+                    <input type="datetime-local" id="endDate" placeholder="請點選結束月份"
+                      class="form-control form-control-sm hnb__calendar">
                     <label class="input-group-text py-1" for="endDate">
                       <span class="mdi mdi-calendar-month"></span>
                     </label>
@@ -125,7 +127,7 @@
         台灣塑膠工業股份有限公司
       </h5>
       <div class="table-responsive">
-        <table class="mb-0 table table-striped table-sm hnb__table">
+        <table class="mb-0 table table-striped table-sm hnb__table hnb__bg--white">
           <thead>
             <tr>
               <th scope="col" class="hnb__tbhd w-25">受益人</th>
@@ -173,7 +175,7 @@
               <td class="text-end">$30,000.00</td>
               <td class="text-end">$30,000.00</td>
             </tr>
-            
+
           </tbody>
         </table>
       </div>
@@ -181,7 +183,7 @@
         台灣化學纖維股份有限公司
       </h5>
       <div class="table-responsive">
-        <table class="mb-0 table table-striped table-sm hnb__table">
+        <table class="mb-0 table table-striped table-sm hnb__table hnb__bg--white">
           <thead>
             <tr>
               <th scope="col" class="hnb__tbhd w-25">受益人</th>
@@ -229,15 +231,15 @@
               <td class="text-end">$30,000.00</td>
               <td class="text-end">$30,000.00</td>
             </tr>
-            
+
           </tbody>
         </table>
-      </div>    
+      </div>
       <h5 class="mt-3 fs-6 fw-bolder hnb__title">
         台塑石化股份有限公司
       </h5>
       <div class="table-responsive">
-        <table class="mb-0 table table-striped table-sm hnb__table">
+        <table class="mb-0 table table-striped table-sm hnb__table hnb__bg--white">
           <thead>
             <tr>
               <th scope="col" class="hnb__tbhd w-25">受益人</th>
@@ -285,7 +287,7 @@
               <td class="text-end">$30,000.00</td>
               <td class="text-end">$30,000.00</td>
             </tr>
-            
+
           </tbody>
         </table>
       </div>
@@ -293,19 +295,19 @@
         南亞塑膠工業股份有限公司
       </h5>
       <div class="table-responsive">
-        <table class="mb-0 table table-striped table-sm hnb__table">
+        <table class="mb-0 table table-striped table-sm hnb__table hnb__bg--white>
           <thead>
             <tr>
-              <th scope="col" class="hnb__tbhd w-25">受益人</th>
-              <th scope="col" class="hnb__tbhd text-nowrap">開狀分行</th>
-              <th scope="col" class="hnb__tbhd text-nowrap">開狀日期</th>
-              <th scope="col" class="hnb__tbhd">申請人</th>
-              <th scope="col" class="hnb__tbhd text-nowrap">申請人統編</th>
-              <th scope="col" class="hnb__tbhd text-nowrap">筆數</th>
-              <th scope="col" class="hnb__tbhd text-nowrap">幣別</th>
-              <th scope="col" class="hnb__tbhd">金額 (單位:元)</th>
-              <th scope="col" class="hnb__tbhd">押匯金額 (單位:元)</th>
-            </tr>
+              <th scope=" col" class="hnb__tbhd w-25">受益人</th>
+          <th scope="col" class="hnb__tbhd text-nowrap">開狀分行</th>
+          <th scope="col" class="hnb__tbhd text-nowrap">開狀日期</th>
+          <th scope="col" class="hnb__tbhd">申請人</th>
+          <th scope="col" class="hnb__tbhd text-nowrap">申請人統編</th>
+          <th scope="col" class="hnb__tbhd text-nowrap">筆數</th>
+          <th scope="col" class="hnb__tbhd text-nowrap">幣別</th>
+          <th scope="col" class="hnb__tbhd">金額 (單位:元)</th>
+          <th scope="col" class="hnb__tbhd">押匯金額 (單位:元)</th>
+          </tr>
           </thead>
           <tbody>
             <tr>
@@ -341,7 +343,7 @@
               <td class="text-end">$30,000.00</td>
               <td class="text-end">$30,000.00</td>
             </tr>
-            
+
           </tbody>
         </table>
       </div>
@@ -357,7 +359,7 @@
       setLcList.classList.remove('hnb__hide')
     });
 
-       
+
 
     // 月曆
     const dateAlert = document.querySelector(".dateAlert");
@@ -379,7 +381,7 @@
       allowInput: true, //可輸入控制
       //minDate: "today", //可選最小時間，可直接接受 'today' 字串
       //maxDate: currentTime.setMonth(currentTime.getMonth() + 1), //可選最大時間，從今天起一個月
-      
+
       onChange: function (selectedDates, dateStr, instance) {
         console.log(`你現在點選的是 ${instance.input.id}，時間為 ${selectedDates} / ${dateStr}`);
         checkDateTime(dateStr, instance.input.id);
@@ -392,23 +394,24 @@
 
     // 辨別結束日期須晚於開始日期
     function checkDateTime(dateStr, id) {
-      if (id === "startDate"){
+      if (id === "startDate") {
         startDateValue = dateStr
       }
-      
-      if (id === "endDate"){
+
+      if (id === "endDate") {
         endDateValue = dateStr
       }
 
-      if (startDateValue > endDateValue){
+      if (startDateValue > endDateValue) {
         dateAlert.classList.remove("d-none");
-      }else{
+      } else {
         dateAlert.classList.add("d-none");
-      }    
+      }
     };
-  </script>  
-  <script src="../assets/js/bootstrap.bundle.min.js"></script>  
+  </script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/jquery-3.7.1.js"></script>
   <script src="../assets/js/page.js"></script>
 </body>
+
 </html>
