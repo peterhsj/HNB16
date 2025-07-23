@@ -533,7 +533,8 @@
               </table>
             </div>
             <div class="d-flex align-items-center justify-content-center">
-              <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--cancel text-nowrap" onclick="closeAlert()">
+              <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--cancel text-nowrap" data-bs-toggle="modal"
+                data-bs-target="#promptModal">
                 離開
               </button>
               <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--print text-nowrap" data-bs-toggle="modal"
@@ -916,7 +917,8 @@
               </table>
             </div>
             <div class="d-flex align-items-center justify-content-center">
-              <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--cancel text-nowrap" onclick="closeAlert()">
+              <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--cancel text-nowrap" data-bs-toggle="modal"
+                data-bs-target="#promptModal">
                 離開
               </button>
               <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--print text-nowrap" data-bs-toggle="modal"
@@ -1305,7 +1307,8 @@
               </table>
             </div>
             <div class="d-flex align-items-center justify-content-center">
-              <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--cancel text-nowrap" onclick="closeAlert()">
+              <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--cancel text-nowrap" data-bs-toggle="modal"
+                data-bs-target="#promptModal">
                 離開
               </button>
               <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--print text-nowrap" data-bs-toggle="modal"
@@ -3011,6 +3014,36 @@
     </div>
   </div>
 
+  <!-- 選擇訊息 視窗 -->
+  <div class="modal fade" id="promptModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="promptModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+      <form id="accountManagerForm">
+        <div class="modal-content hnb__modal">
+          <div class="modal-header py-2 border-bottom-0">
+            <h5 class="modal-title fs-5 fw-bolder text--hnb" id="promptModalLabel">
+              作業訊息
+            </h5>
+            <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal"
+              aria-label="Close">
+              <span class="mdi mdi-close"></span>
+            </button>
+          </div>
+          <div class="modal-body bg-light">
+            <p class="fw-bold hnb__text--green text-center">
+              離開不會儲存此筆資料，您確認要離開嗎？
+            </p>
+          </div>
+          <div class="modal-footer justify-content-center border-top-0">
+            <button type="button" class="px-3 btn btn-sm border-1 hnb__btn--cancel" data-bs-dismiss="modal">取消</button>
+            <button type="button" class="px-3 btn btn-sm border-1 hnb__btn--default"
+              onclick="location.href = 'LcApp.html';">確定</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <!-- JS -->
   <script>
     let currentEditType = '';
@@ -3086,7 +3119,6 @@
 
     // 查詢舊有開狀申請書 searchHandler
     function searchHandler() {
-      //queryForm.classList.add('hnb__hide');
       queryList.classList.remove('hnb__hide');
     };
 
@@ -3101,7 +3133,6 @@
       if (currentEditType === 'other') {
         lcforOtherAppList.classList.remove('hnb__hide');
       }
-
     };
 
     // 開狀申請書類別變更(即期 / 遠期) changeLcType
@@ -3130,12 +3161,6 @@
         beneName1.textContent = '泰西股份有限公司';
       }
     });
-
-    function closeAlert() {
-      if (confirm('離開不會儲存此筆資料，您確認要離開嗎？') === true) {
-        location.href = 'LcApp.html';
-      };
-    };
 
     // 月曆
     const dateAlert = document.querySelector(".dateAlert");
@@ -3176,7 +3201,7 @@
       }
     };
 
-    // 有效期限 / 最後交貨日期 / 限定押匯日期 - 日期選擇器
+    // 日期選擇器 - 有效期限 / 最後交貨日期 / 限定押匯日期
     flatpickr('#expDate, #deliveryDate, #draftDate', config);
 
   </script>
