@@ -75,7 +75,7 @@
           </div>
           <div class="row">
             <div class="col text-end py-1">
-              <button type="button" id="setType" class="px-3 btn btn-sm hnb__btn--default text-nowrap disabled"
+              <button type="button" id="setTypeBtn" class="px-3 btn btn-sm hnb__btn--default text-nowrap disabled"
                 onclick="settingHandler()">確定</button>
             </div>
           </div>
@@ -349,10 +349,14 @@
                   <tr>
                     <th class="hnb__tbhd2" style="width: 200px">信用狀別：</th>
                     <td>
-                      <select id="lcType" class="form-select form-select-sm">
-                        <option selected>即期</option>
-                        <option>遠期</option>
-                      </select>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="lcTypeOptions" id="rate1" value="lcType1">
+                        <label class="form-check-label" for="lcType1">即期</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="lcTypeOptions" id="rate2" value="lcType2">
+                        <label class="form-check-label" for="lcType2">遠期</label>
+                      </div>
                     </td>
                     <th class="hnb__tbhd2" style="width: 150px">付款銀行：</th>
                     <td>
@@ -3053,7 +3057,7 @@
     const bene = document.querySelector('#bene');
     const inputSelect = document.querySelector('#inputSelect');
     const inputType = document.querySelector('#inputType');
-    const setType = document.querySelector('#setType');
+    const setTypeBtn = document.querySelector('#setTypeBtn');
     // 查詢控制項
     const setForm = document.querySelector('#setForm');
     const queryForm = document.querySelector('#queryForm');
@@ -3091,11 +3095,11 @@
 
     function checkSetForm() {
       if (beneType.value === 'cds' && bene.value !== '0') {
-        setType.classList.remove('disabled');
+        setTypeBtn.classList.remove('disabled');
       } else if ((beneType.value === 'fpc' || beneType.value === 'other') && inputType.value !== '0') {
-        setType.classList.remove('disabled');
+        setTypeBtn.classList.remove('disabled');
       } else {
-        setType.classList.add('disabled');
+        setTypeBtn.classList.add('disabled');
       };
     };
 
