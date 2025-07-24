@@ -149,7 +149,7 @@
                     <a href="#" class="hnb__link--text" data-bs-toggle="modal" data-bs-target="#lcDetailModal"
                       onclick="changeLcType('即期')">099700049161000860</a>
                   </td>
-                  <td class="text-nowrap">高雄分行</td>
+                  <td class="text-center text-nowrap">高雄分行</td>
                   <td class="text-center">
                     114/06/05
                   </td>
@@ -169,7 +169,7 @@
                     <a href="#" class="hnb__link--text" data-bs-toggle="modal" data-bs-target="#lcDetailModal"
                       onclick="changeLcType('遠期')">099700049161000861</a>
                   </td>
-                  <td class="text-nowrap">高雄分行</td>
+                  <td class="text-center text-nowrap">高雄分行</td>
                   <td class="text-center">
                     114/06/05
                   </td>
@@ -189,7 +189,7 @@
                     <a href="#" class="hnb__link--text" data-bs-toggle="modal" data-bs-target="#lcDetailModal"
                       onclick="changeLcType('即期')">099700049161000862</a>
                   </td>
-                  <td class="text-nowrap">高雄分行</td>
+                  <td class="text-center text-nowrap">高雄分行</td>
                   <td class="text-center">
                     114/06/05
                   </td>
@@ -297,14 +297,12 @@
                         </tr>
                       </tbody>
                     </table>
-              </table>
-              </td>
-              </tr>
+                  </td>
+                </tr>
               </table>
             </div>
             <div class="d-flex align-items-center justify-content-center">
-              <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--cancel text-nowrap"
-                onclick="location.href='CancelApp.html'">
+              <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--cancel text-nowrap" onclick="cancelHandler()">
                 取消
               </button>
               <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--default text-nowrap" data-bs-toggle="modal"
@@ -1261,6 +1259,13 @@
             </p>`;
       msgFooter.innerHTML = `<button type="button" class="px-3 btn btn-sm border-1 hnb__btn--default"
               onclick="location.href = 'CancelApp.html';">回註銷申請書</button>`;
+    };
+
+    // 取消
+    function cancelHandler() {
+      queryForm.classList.remove('hnb__hide');
+      queryList.classList.remove('hnb__hide');
+      lcAppList.classList.add('hnb__hide');
     };
 
     // 月曆
