@@ -33,9 +33,9 @@
         <h1 class="py-2 fs-4 fw-bolder">請選擇查詢方式</h1>
         <div class="mb-2 card">
           <div class="card-body bg-light">
-            <div class="row">
+            <div class="row pb-2">
               <div class="col-12 col-md-6 col-lg-4">
-                <div class="mb-3 row">
+                <div class="row">
                   <label for="beneType" class="col-2 col-md-3 col-form-label text-end text-nowrap">受益人類別</label>
                   <div class="col-10 col-md-9">
                     <select id="beneType" class="form-select form-select-sm">
@@ -48,9 +48,10 @@
                 </div>
               </div>
             </div>
-            <div class="row">
+            <hr class="my-0 mb-1 border border-0 border-top border-secondary">
+            <div class="row py-2">
               <div class="col-12 col-md-6 col-lg-4">
-                <div class="mb-3 row">
+                <div class="row">
                   <label for="lcNo" class="col-2 col-md-3 col-form-label text-end text-nowrap">信用狀號碼</label>
                   <div class="col-10 col-md-9">
                     <input type="text" class="form-control form-control-sm" id="lcNo">
@@ -58,7 +59,36 @@
                 </div>
               </div>
             </div>
-            <div class="row">
+            <hr class="my-0 mb-1 border border-0 border-top border-secondary">
+            <div class="row py-2">
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="mb-2 row">
+                  <label for="beneNo" class="col-2 col-md-3 col-form-label text-end text-nowrap">申請人放款戶號</label>
+                  <div class="col-10 col-md-9">
+                    <input type="text" class="form-control form-control-sm" id="beneNo">
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="mb-2 row">
+                  <label for="beneInNo" class="col-2 col-md-3 col-form-label text-end text-nowrap">受益人統編</label>
+                  <div class="col-10 col-md-9">
+                    <input type="text" class="form-control form-control-sm" id="beneInNo">
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="mb-2 row">
+                  <label for="status" class="col-2 col-md-3 col-form-label text-end text-nowrap">信用狀狀態</label>
+                  <div class="col-10 col-md-9">
+                    <select id="branchNo" class="form-select form-select-sm">
+                      <option selected>= 請選擇 =</option>
+                      <option>已到期</option>
+                      <option>未到期</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
               <div class="col-12 col-md-6 col-lg-4">
                 <div class="row">
                   <label for="appDate" class="col-2 col-md-3 col-form-label text-end text-nowrap">開狀日期</label>
@@ -86,34 +116,6 @@
                         結束日期須晚於開始日期
                       </span>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-lg-4">
-                <div class="mb-2 row">
-                  <label for="beneNo" class="col-2 col-md-3 col-form-label text-end text-nowrap">申請人放款戶號</label>
-                  <div class="col-10 col-md-9">
-                    <input type="text" class="form-control form-control-sm" id="beneNo">
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-lg-4">
-                <div class="mb-2 row">
-                  <label for="beneInNo" class="col-2 col-md-3 col-form-label text-end text-nowrap">受益人統編</label>
-                  <div class="col-10 col-md-9">
-                    <input type="text" class="form-control form-control-sm" id="beneInNo">
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-lg-4">
-                <div class="mb-2 row">
-                  <label for="status" class="col-2 col-md-3 col-form-label text-end text-nowrap">信用狀狀態</label>
-                  <div class="col-10 col-md-9">
-                    <select id="branchNo" class="form-select form-select-sm">
-                      <option selected>= 請選擇 =</option>
-                      <option>已到期</option>
-                      <option>未到期</option>
-                    </select>
                   </div>
                 </div>
               </div>

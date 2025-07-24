@@ -23,33 +23,17 @@
           <a id="homePage" class="hnb__path" href="javascript:void(0)">首頁</a>
         </li>
         <li class="breadcrumb-item">申請作業</li>
-        <li class="breadcrumb-item active" aria-current="page">註銷申請/切結書</li>
+        <li class="breadcrumb-item active" aria-current="page">押匯申請</li>
       </ol>
     </nav>
 
-    <!-- 查詢註銷申請書 -->
+    <!-- 查詢押匯申請 -->
     <div id="queryForm">
       <form>
         <h1 class="py-2 fs-4 fw-bolder">請選擇查詢方式</h1>
         <div class="mb-2 card">
           <div class="card-body bg-light">
             <div class="row pb-2">
-              <div class="col-12 col-md-6 col-lg-4">
-                <div class="row">
-                  <label for="beneType" class="col-2 col-md-3 col-form-label text-end text-nowrap">受益人類別</label>
-                  <div class="col-10 col-md-9">
-                    <select id="beneType" class="form-select form-select-sm">
-                      <option value="0" selected>= 請選擇 =</option>
-                      <option value="cds">CDS 客戶 ( 中鋼、中鴻、中鋁、唐榮 )</option>
-                      <option value="fpc">台塑 e 化集團</option>
-                      <option value="other">其他客戶</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr class="my-0 mb-1 border border-0 border-top border-secondary">
-            <div class="row py-2">
               <div class="col-12 col-md-6 col-lg-4">
                 <div class="row">
                   <label for="lcNo" class="col-2 col-md-3 col-form-label text-end text-nowrap">信用狀號碼</label>
@@ -63,9 +47,17 @@
             <div class="row py-2">
               <div class="col-12 col-md-6 col-lg-4">
                 <div class="mb-2 row">
-                  <label for="beneInNo" class="col-2 col-md-3 col-form-label text-end text-nowrap">受益人統編</label>
+                  <label for="appNo" class="col-2 col-md-3 col-form-label text-end text-nowrap">申請人統編</label>
                   <div class="col-10 col-md-9">
-                    <input type="text" class="form-control form-control-sm" id="beneInNo">
+                    <input type="text" class="form-control form-control-sm" id="appNo">
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="mb-2 row">
+                  <label for="beneNo" class="col-2 col-md-3 col-form-label text-end text-nowrap">受益人統編</label>
+                  <div class="col-10 col-md-9">
+                    <input type="text" class="form-control form-control-sm" id="beneNo">
                   </div>
                 </div>
               </div>
@@ -83,7 +75,7 @@
               </div>
               <div class="col-12 col-md-6 col-lg-4">
                 <div class="row">
-                  <label for="appDate" class="col-2 col-md-3 col-form-label text-end text-nowrap">開狀日期</label>
+                  <label class="col-2 col-md-3 col-form-label text-end text-nowrap">開狀日期</label>
                   <div class="col-10 col-md-9">
                     <div class="d-flex align-items-center">
                       <div class="input-group flex-nowrap">
@@ -115,7 +107,7 @@
             <div class="row">
               <div class="col text-end py-1">
                 <button type="reset" id="resetBtn" class="me-2 px-3 btn btn-sm hnb__btn--reset">重設</button>
-                <button type="button" id="searchBtn" class="px-3 btn btn-sm hnb__btn--default text-nowrap disabled"
+                <button type="button" id="searchBtn" class="px-3 btn btn-sm hnb__btn--default text-nowrap"
                   onclick="searchHandler()">確定</button>
               </div>
             </div>
@@ -1182,21 +1174,12 @@
     let currentEditType = '';
     // 查詢控制項
     const searchBtn = document.querySelector('#searchBtn');
-    const beneType = document.querySelector('#beneType');
     // 註銷申請/切結書欄位
     const appName = document.querySelector('#appName'); // 申請人
     const beneName = document.querySelector('#beneName'); // 受益人
     const cds = { app: '林大華', bene: '中鴻鋼鐵股份有限公司' };
     const fpc = { app: '石梅股份有限公司', bene: '台灣塑膠工業股份有限公司' };
     const other = { app: '網際優勢股份有限公司', bene: '網際優勢股份有限公司' };
-
-
-    beneType.addEventListener('change', () => {
-      currentEditType = beneType.value;
-      if (currentEditType !== '0') {
-        searchBtn.classList.remove('disabled');
-      }
-    });
 
     const queryForm = document.querySelector('#queryForm');
     const queryList = document.querySelector('#queryList');
