@@ -1091,21 +1091,18 @@
   <div class="modal fade" id="messageModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="messageModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
-      <form id="accountManagerForm">
-        <div class="modal-content hnb__modal">
-          <div class="modal-header py-2 border-bottom-0">
-            <h5 class="modal-title fs-5 fw-bolder text--hnb" id="messageModalLabel">
-              作業訊息
-            </h5>
-            <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal"
-              aria-label="Close">
-              <span class="mdi mdi-close"></span>
-            </button>
-          </div>
-          <div id="msgBody" class="modal-body bg-light"></div>
-          <div id="msgFooter" class="modal-footer justify-content-center border-top-0"></div>
+      <div class="modal-content hnb__modal">
+        <div class="modal-header py-2 border-bottom-0">
+          <h5 class="modal-title fs-5 fw-bolder text--hnb" id="messageModalLabel">
+            作業訊息
+          </h5>
+          <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal" aria-label="Close">
+            <span class="mdi mdi-close"></span>
+          </button>
         </div>
-      </form>
+        <div id="msgBody" class="modal-body bg-light"></div>
+        <div id="msgFooter" class="modal-footer justify-content-center border-top-0"></div>
+      </div>
     </div>
   </div>
 
@@ -1113,29 +1110,26 @@
   <div class="modal fade" id="confirmPromptModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="confirmPromptModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
-      <form id="accountManagerForm">
-        <div class="modal-content hnb__modal">
-          <div class="modal-header py-2 border-bottom-0">
-            <h5 class="modal-title fs-5 fw-bolder text--hnb" id="confirmPromptModalLabel">
-              作業訊息
-            </h5>
-            <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal"
-              aria-label="Close">
-              <span class="mdi mdi-close"></span>
-            </button>
-          </div>
-          <div class="modal-body bg-light">
-            <p class="fw-bold hnb__text--green text-center">
-              請注意！此張信用狀於今天開立，一但申請註銷申請書，則無法進行當日更正開狀申請書，確定要提出註銷申請書嗎？
-            </p>
-          </div>
-          <div class="modal-footer justify-content-center border-top-0">
-            <button type="button" class="px-3 btn btn-sm border-1 hnb__btn--cancel" data-bs-dismiss="modal">取消</button>
-            <button type="button" class="px-3 btn btn-sm border-1 hnb__btn--default" data-bs-toggle="modal"
-              data-bs-target="#messageModal" onclick="confirmHandler();">確定</button>
-          </div>
+      <div class="modal-content hnb__modal">
+        <div class="modal-header py-2 border-bottom-0">
+          <h5 class="modal-title fs-5 fw-bolder text--hnb" id="confirmPromptModalLabel">
+            作業訊息
+          </h5>
+          <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal" aria-label="Close">
+            <span class="mdi mdi-close"></span>
+          </button>
         </div>
-      </form>
+        <div class="modal-body bg-light">
+          <p class="fw-bold hnb__text--green text-center">
+            請注意！此張信用狀於今天開立，一但申請註銷申請書，則無法進行當日更正開狀申請書，確定要提出註銷申請書嗎？
+          </p>
+        </div>
+        <div class="modal-footer justify-content-center border-top-0">
+          <button type="button" class="px-3 btn btn-sm border-1 hnb__btn--cancel" data-bs-dismiss="modal">取消</button>
+          <button type="button" class="px-3 btn btn-sm border-1 hnb__btn--default" data-bs-toggle="modal"
+            data-bs-target="#messageModal" onclick="confirmHandler();">確定</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1143,29 +1137,26 @@
   <div class="modal fade" id="promptModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="promptModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
-      <form id="accountManagerForm">
-        <div class="modal-content hnb__modal">
-          <div class="modal-header py-2 border-bottom-0">
-            <h5 class="modal-title fs-5 fw-bolder text--hnb" id="promptModalLabel">
-              作業訊息
-            </h5>
-            <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal"
-              aria-label="Close">
-              <span class="mdi mdi-close"></span>
-            </button>
-          </div>
-          <div class="modal-body bg-light">
-            <p class="fw-bold hnb__text--green text-center">
-              離開不會儲存此筆資料，您確認要離開嗎？
-            </p>
-          </div>
-          <div class="modal-footer justify-content-center border-top-0">
-            <button type="button" class="px-3 btn btn-sm border-1 hnb__btn--cancel" data-bs-dismiss="modal">取消</button>
-            <button type="button" class="px-3 btn btn-sm border-1 hnb__btn--default"
-              onclick="location.href = 'AmendApp.html';">確定</button>
-          </div>
+      <div class="modal-content hnb__modal">
+        <div class="modal-header py-2 border-bottom-0">
+          <h5 class="modal-title fs-5 fw-bolder text--hnb" id="promptModalLabel">
+            作業訊息
+          </h5>
+          <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal" aria-label="Close">
+            <span class="mdi mdi-close"></span>
+          </button>
         </div>
-      </form>
+        <div class="modal-body bg-light">
+          <p class="fw-bold hnb__text--green text-center">
+            離開不會儲存此筆資料，您確認要離開嗎？
+          </p>
+        </div>
+        <div class="modal-footer justify-content-center border-top-0">
+          <button type="button" class="px-3 btn btn-sm border-1 hnb__btn--cancel" data-bs-dismiss="modal">取消</button>
+          <button type="button" class="px-3 btn btn-sm border-1 hnb__btn--default"
+            onclick="location.href = 'AmendApp.html';">確定</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1174,13 +1165,6 @@
     let currentEditType = '';
     // 查詢控制項
     const searchBtn = document.querySelector('#searchBtn');
-    // 註銷申請/切結書欄位
-    const appName = document.querySelector('#appName'); // 申請人
-    const beneName = document.querySelector('#beneName'); // 受益人
-    const cds = { app: '林大華', bene: '中鴻鋼鐵股份有限公司' };
-    const fpc = { app: '石梅股份有限公司', bene: '台灣塑膠工業股份有限公司' };
-    const other = { app: '網際優勢股份有限公司', bene: '網際優勢股份有限公司' };
-
     const queryForm = document.querySelector('#queryForm');
     const queryList = document.querySelector('#queryList');
     const lcForCdsAppList = document.querySelector('#lcForCdsAppList');
@@ -1194,32 +1178,28 @@
 
     // 編輯註銷申請/切結書 editHandler
     function editHandler() {
-      if (currentEditType === 'cds' || currentEditType === 'other') {
-        queryForm.classList.add('hnb__hide');
-        queryList.classList.add('hnb__hide');
-        lcAppList.classList.remove('hnb__hide');
-        appName.textContent = currentEditType === 'cds' ? cds.app : other.app;
-        beneName.textContent = currentEditType === 'cds' ? cds.bene : other.bene;
-      }
-
-      if (currentEditType === 'fpc') {
-        appName.textContent = fpc.app;
-        beneName.textContent = fpc.bene;
-        $('#messageModal').modal('show');
-        msgBody.innerHTML = `<p class="fw-bold hnb__text--green text-center">
-              注意：欲註銷未過期信狀餘額，<br>
-              請先取得受益人之同意書。
-            </p>`;
-        msgFooter.innerHTML = `<button type="button" class="px-3 btn btn-sm border-1 hnb__btn--default" data-bs-dismiss="modal" onclick="fpcCheck();">確定</button>`;
-      }
-
-    };
-
-    function fpcCheck() {
       queryForm.classList.add('hnb__hide');
       queryList.classList.add('hnb__hide');
       lcAppList.classList.remove('hnb__hide');
+
+      // if (currentEditType === 'fpc') {
+      //   appName.textContent = fpc.app;
+      //   beneName.textContent = fpc.bene;
+      //   $('#messageModal').modal('show');
+      //   msgBody.innerHTML = `<p class="fw-bold hnb__text--green text-center">
+      //         注意：欲註銷未過期信狀餘額，<br>
+      //         請先取得受益人之同意書。
+      //       </p>`;
+      //   msgFooter.innerHTML = `<button type="button" class="px-3 btn btn-sm border-1 hnb__btn--default" data-bs-dismiss="modal" onclick="fpcCheck();">確定</button>`;
+      // }
+
     };
+
+    // function fpcCheck() {
+    //   queryForm.classList.add('hnb__hide');
+    //   queryList.classList.add('hnb__hide');
+    //   lcAppList.classList.remove('hnb__hide');
+    // };
 
     // 信用狀類別變更(即期 / 遠期) changeLcType
     function changeLcType(type) {
