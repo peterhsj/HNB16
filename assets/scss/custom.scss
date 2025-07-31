@@ -423,6 +423,17 @@ form {
       }
     }
 
+    &--select {
+      background-color: #2fbcc2;
+      border: 1px solid #207a7e;
+      color: #ffffff;
+
+      &:hover {
+        background-color: #16a8ae;
+        color: #ffffff;
+      }
+    }
+
     &--close {
       color: $tfb-text-color;
       font-size: 30px;
