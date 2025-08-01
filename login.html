@@ -21,15 +21,23 @@
           </div>
         </div>
 
-        <div class="form-floating">
-          <input type="text" class="form-control form-control-sm" id="floatingInput" placeholder="帳號">
-          <label for="floatingInput">帳號</label>
+        <div class="my-2 form-floating">
+          <select class="form-select form-select-sm" id="auth">
+            <option value="H" selected>經辦</option>
+            <option value="S">主管</option>
+          </select>
+          <label for="auth">權限</label>
         </div>
         <div class="form-floating">
-          <input type="password" class="form-control form-control-sm" id="floatingPassword" autocomplete="false" placeholder="密碼">
-          <label for="floatingPassword">密碼</label>
+          <input type="text" class="form-control form-control-sm" id="account" placeholder="帳號">
+          <label for="account">帳號</label>
         </div>
-        
+        <div class="form-floating">
+          <input type="password" class="form-control form-control-sm" id="password" autocomplete="false"
+            placeholder="密碼">
+          <label for="password">密碼</label>
+        </div>
+
         <button id="signIn" class="w-100 btn btn-lg login" type="submit">進入</button>
       </form>
     </main>
@@ -37,13 +45,16 @@
   <!-- JS Plugin -->
   <script>
     const signIn = document.querySelector('#signIn');
+    const auth = document.querySelector('#auth');
     signIn.addEventListener('click', (e) => {
+      console.log('auth:', auth.value);
       e.preventDefault();
       document.cookie = 'username=hnb';
-      window.location.href = './index.html'
+      window.location.href = `./index.html?auth=${auth.value}`;
     });
   </script>
-  <script src="./assets/js/bootstrap.bundle.min.js"></script>  
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
   <script src="./assets/js/jquery-3.7.1.js"></script>
 </body>
+
 </html>

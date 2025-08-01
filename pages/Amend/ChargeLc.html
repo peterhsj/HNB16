@@ -1570,16 +1570,15 @@
     </div>
   </div>
   <!-- JS -->
+  <script src="../../assets/js/page.js"></script>
   <script>
+    console.log('authType:', authType);
     // 不收費用
     function noCharge() {
       if (confirm('確定不再補收此次之開狀手續費？') === true) {
         location.href = 'ChargeLc.html';
       };
     };
-
-
-
 
     // 月曆
     const dateAlert = document.querySelector(".dateAlert");
@@ -1622,7 +1621,6 @@
   </script>
   <script src="../../assets/js/bootstrap.bundle.min.js"></script>
   <script src="../../assets/js/jquery-3.7.1.js"></script>
-  <script src="../../assets/js/page.js"></script>
 </body>
 
 </html>

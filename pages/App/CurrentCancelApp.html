@@ -27,95 +27,6 @@
       </ol>
     </nav>
 
-    <!-- 查詢當日更正修改申請 -->
-    <!-- <div id="queryForm" class="hnb__hide">
-      <form>
-        <h1 class="py-2 fs-4 fw-bolder">請選擇查詢方式</h1>
-        <div class="mb-2 card">
-          <div class="card-body bg-light">
-            <div class="row pb-2">
-              <div class="col-12 col-md-6 col-lg-4">
-                <div class="row">
-                  <label for="lcNo" class="col-2 col-md-3 col-form-label text-end text-nowrap">信用狀號碼</label>
-                  <div class="col-10 col-md-9">
-                    <input type="text" class="form-control form-control-sm" id="lcNo">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr class="my-0 mb-1 border border-0 border-top border-secondary">
-            <div class="row py-2">
-              <div class="col-12 col-md-6 col-lg-4">
-                <div class="mb-2 row">
-                  <label for="appNo" class="col-2 col-md-3 col-form-label text-end text-nowrap">申請人統編</label>
-                  <div class="col-10 col-md-9">
-                    <input type="text" class="form-control form-control-sm" id="appNo">
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-lg-4">
-                <div class="mb-2 row">
-                  <label for="beneNo" class="col-2 col-md-3 col-form-label text-end text-nowrap">受益人統編</label>
-                  <div class="col-10 col-md-9">
-                    <input type="text" class="form-control form-control-sm" id="beneNo">
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-lg-4">
-                <div class="mb-2 row">
-                  <label for="status" class="col-2 col-md-3 col-form-label text-end text-nowrap">信用狀狀態</label>
-                  <div class="col-10 col-md-9">
-                    <select id="branchNo" class="form-select form-select-sm">
-                      <option selected>= 請選擇 =</option>
-                      <option>已到期</option>
-                      <option>未到期</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-lg-4">
-                <div class="row">
-                  <label class="col-2 col-md-3 col-form-label text-end text-nowrap">開狀日期</label>
-                  <div class="col-10 col-md-9">
-                    <div class="d-flex align-items-center">
-                      <div class="input-group flex-nowrap">
-                        <input type="datetime-local" id="startDate" placeholder="請點選起日"
-                          class="form-control form-control-sm hnb__calendar">
-                        <label class="input-group-text py-1" for="startDate">
-                          <span class="mdi mdi-calendar-month"></span>
-                        </label>
-                      </div>
-                      <span class="px-2">~</span>
-                      <div class="input-group flex-nowrap">
-                        <input type="datetime-local" id="endDate" placeholder="請點選訖日"
-                          class="form-control form-control-sm hnb__calendar">
-                        <label class="input-group-text py-1" for="endDate">
-                          <span class="mdi mdi-calendar-month"></span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="pt-1 text-danger text-end text-nowrap">
-                      <span class="text-danger dateAlert pe-2 d-none pe-1">
-                        <span class="mdi mdi-close-thick"></span>
-                        結束日期須晚於開始日期
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col text-end py-1">
-                <button type="reset" id="resetBtn" class="me-2 px-3 btn btn-sm hnb__btn--reset">重設</button>
-                <button type="button" id="searchBtn" class="px-3 btn btn-sm hnb__btn--default text-nowrap"
-                  onclick="searchHandler()">確定</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div> -->
-
     <!-- 當日更正註銷申請清冊 -->
     <div id="queryList">
       <h1 class="py-2 fs-4 fw-bolder">當日更正註銷申請清冊</h1>
@@ -841,7 +752,9 @@
   </div>
 
   <!-- JS -->
+  <script src="../../assets/js/page.js"></script>
   <script>
+    console.log('authType:', authType);
     let currentEditType = '';
     const queryList = document.querySelector('#queryList');
     const lcForCdsAppList = document.querySelector('#lcForCdsAppList');
@@ -947,7 +860,6 @@
   </script>
   <script src="../../assets/js/bootstrap.bundle.min.js"></script>
   <script src="../../assets/js/jquery-3.7.1.js"></script>
-  <script src="../../assets/js/page.js"></script>
 </body>
 
 </html>
