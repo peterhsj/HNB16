@@ -39,11 +39,19 @@
                   <th scope="col" class="hnb__tbhd">編號</th>
                   <th scope="col" class="hnb__tbhd">修改申請書號碼</th>
                   <th scope="col" class="hnb__tbhd">申請日期</th>
-                  <th scope="col" class="hnb__tbhd">申請人</th>
-                  <th scope="col" class="hnb__tbhd">金額</th>
-                  <th scope="col" class="hnb__tbhd">通知銀行</th>
+                  <th scope="col" class="hnb__tbhd">
+                    * 申請人
+                  </th>
+                  <th scope="col" class="hnb__tbhd">
+                    * 原金額
+                  </th>
+                  <th scope="col" class="hnb__tbhd">
+                    * 通知銀行
+                  </th>
                   <th scope="col" class="hnb__tbhd">受益人</th>
-                  <th scope="col" class="hnb__tbhd">有效期限</th>
+                  <th scope="col" class="hnb__tbhd">
+                    * 有效期限
+                  </th>
                   <th scope="col" class="hnb__tbhd" style="min-width:200px">尚待核准人員</th>
                   <th scope="col" class="hnb__tbhd">狀態</th>
                 </tr>
@@ -79,63 +87,7 @@
                 </tr>
               </tbody>
             </table>
-
-
-            <!-- <table class="mb-0 table table-striped table-sm hnb__table hnb__bg--white">
-              <thead>
-                <tr>
-                  <th scope="col" class="hnb__tbhd text-nowrap">編號</th>
-                  <th scope="col" class="hnb__tbhd text-nowrap">修改申請書號碼</th>
-                  <th scope="col" class="hnb__tbhd text-nowrap">信用狀號碼</th>
-                  <th scope="col" class="hnb__tbhd text-nowrap">信用狀別</th>
-                  <th scope="col" class="hnb__tbhd text-nowrap">修改通知書號碼</th>
-                  <th scope="col" class="hnb__tbhd text-nowrap">申請日期</th>
-                  <th scope="col" class="hnb__tbhd text-nowrap">申請人</th>
-                  <th scope="col" class="hnb__tbhd text-nowrap">通知銀行</th>
-                  <th scope="col" class="hnb__tbhd text-nowrap">受益人</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="text-center" width="50">1</td>
-                  <td class="text-center text-nowrap">
-                    <a href="#" class="hnb__link--text" onclick="reviewLcApp()">099700017161000861-A-02</a>
-                  </td>
-                  <td class="text-center text-nowrap">
-                    <a href="#" class="hnb__link--text" data-bs-toggle="modal" data-bs-target="#lcDetailModal"
-                      onclick="changeLcType('即期')">099700049161000861</a>
-                  </td>
-                  <td class="text-center text-nowrap">即期</td>
-                  <td class="text-center text-nowrap">
-                    <a href="#" class="hnb__link--text" data-bs-toggle="modal"
-                      data-bs-target="#noticeModal">099700017161000862-02</a>
-                  </td>
-                  <td class="text-center">2025/06/05</td>
-                  <td class="text-nowrap">網際測試股份有限公司</td>
-                  <td class="text-center text-nowrap">高雄分行</td>
-                  <td class="text-nowrap">中國鋼鐵股份有限公司</td>
-                </tr>
-                <tr>
-                  <td class="text-center" width="50">2</td>
-                  <td class="text-center text-nowrap">
-                    <a href="#" class="hnb__link--text" onclick="reviewLcApp()">099700017161000862-A-02</a>
-                  </td>
-                  <td class="text-center text-nowrap">
-                    <a href="#" class="hnb__link--text" data-bs-toggle="modal" data-bs-target="#lcDetailModal"
-                      onclick="changeLcType('即期')">099700017161000862</a>
-                  </td>
-                  <td class="text-center text-nowrap">即期</td>
-                  <td class="text-center text-nowrap">
-                    <a href="#" class="hnb__link--text" data-bs-toggle="modal"
-                      data-bs-target="#noticeModal">099700017161000862-02</a>
-                  </td>
-                  <td class="text-center">2025/06/05</td>
-                  <td class="text-nowrap">網際測試股份有限公司</td>
-                  <td class="text-center text-nowrap">高雄分行</td>
-                  <td class="text-nowrap">優勢測試股份有限公司</td>
-                </tr>
-              </tbody>
-            </table> -->
+            <div class="mt-1 hnb__text--red">請注意：「*」號欄位所顯示之內容並不一定已被賣方( 受益人 )所接受，僅供參考</div>
           </div>
         </div>
       </div>
@@ -392,7 +344,7 @@
       <div class="modal-content hnb__modal">
         <div class="modal-header py-2 border-bottom-0">
           <h5 class="modal-title fs-5 fw-bolder text--hnb" id="creditModalLabel">
-            審核開狀申請書-授信資料
+            審核修改申請書-授信資料
           </h5>
           <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal" aria-label="Close">
             <span class="mdi mdi-close"></span>
