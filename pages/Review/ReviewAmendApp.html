@@ -131,9 +131,9 @@
       </nav>
     </div>
 
-    <!-- 信用狀修改申請書 -->
+    <!-- 審核信用狀修改申請書 -->
     <div id="lcAppList" class="hnb__hide">
-      <h1 class="py-2 fs-4 fw-bolder">信用狀修改申請書</h1>
+      <h1 class="py-2 fs-4 fw-bolder">審核信用狀修改申請書</h1>
       <div class="mb-2 card">
         <div class="card-body bg-light">
           <div class="container">
@@ -309,11 +309,11 @@
           </div>
           <div class="pt-2 pb-4 d-flex align-items-center justify-content-center">
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="radioGroup1" id="iRadio1" value="option1">
+              <input class="form-check-input" type="radio" name="reviewStatus" id="iRadio1" value="approved">
               <label class="form-check-label" for="iRadio1">核准</label>
             </div>
             <div class="form-check form-check-inline me-1">
-              <input class="form-check-input" type="radio" name="radioGroup1" id="iRadio2" value="option2">
+              <input class="form-check-input" type="radio" name="reviewStatus" id="iRadio2" value="reject">
               <label class="form-check-label" for="iRadio2">拒絕 / 拒絕原因：</label>
             </div>
             <select name="select2" class="form-select form-select-sm" style="width:200px">
@@ -328,7 +328,8 @@
             <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--cancel text-nowrap" onclick="cancelHandler()">
               取消
             </button>
-            <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--default text-nowrap" onclick="confirmHandler();">
+            <button type="button" id="confirmButton" class="m-1 px-3 btn btn-sm hnb__btn--default text-nowrap disabled"
+              onclick="confirmHandler();">
               確定
             </button>
           </div>
@@ -1330,6 +1331,19 @@
     const lcAppList = document.querySelector('#lcAppList');
     const lcforOtherAppList = document.querySelector('#lcforOtherAppList');
 
+    // 確認按鈕狀態監聽
+    const reviewStatusList = document.querySelectorAll('input[name="reviewStatus"]');
+    const confirmButton = document.querySelector('#confirmButton');
+    let reviewStatus = '';
+    reviewStatusList.forEach((status) => {
+      status.addEventListener('change', () => {
+        if (!!status.value) {
+          reviewStatus = status.value;
+          confirmButton.classList.remove('disabled');
+        }
+      });
+    });
+
     // 查詢押匯申請 searchHandler
     function searchHandler() {
       queryList.classList.remove('hnb__hide');
@@ -1371,7 +1385,7 @@
       messageModal.classList.add('modal-xl');
       $('#messageModal').modal('hide');
       setTimeout(() => {
-        msgBody.innerHTML = `
+        msgBody.innerHTML = reviewStatus === 'approved' ? `
         <div class="table-responsive">
           <table class="mb-0 table table-striped table-sm hnb__table hnb__bg--white">
             <thead>
@@ -1389,6 +1403,29 @@
                 <td class="text-nowrap">網際測試股份有限公司</td>
                 <td class="text-nowrap">優勢測試股份有限公司</td>
                 <td class="text-center text-nowrap">核准</td>
+                <td class="text-center">審核完成</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>` :
+          `
+        <div class="table-responsive">
+          <table class="mb-0 table table-striped table-sm hnb__table hnb__bg--white">
+            <thead>
+              <tr>
+                <th scope="col" class="hnb__tbhd">修改申請書號碼</th>
+                <th scope="col" class="hnb__tbhd">申請人</th>
+                <th scope="col" class="hnb__tbhd">受益人</th>
+                <th scope="col" class="hnb__tbhd text-nowrap">審核動作</th>
+                <th scope="col" class="hnb__tbhd text-nowrap">執行結果</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center text-nowrap">099700017161000861-A-01</td>
+                <td class="text-nowrap">網際測試股份有限公司</td>
+                <td class="text-nowrap">優勢測試股份有限公司</td>
+                <td class="text-center text-nowrap">拒絕</td>
                 <td class="text-center">審核完成</td>
               </tr>
             </tbody>
