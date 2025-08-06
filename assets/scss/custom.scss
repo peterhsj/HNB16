@@ -254,6 +254,18 @@ form {
         border-bottom: 1px solid transparent
       }
     }
+
+    &--icon {
+      color: #0099cc;
+      text-decoration: none;
+      line-height: 1;
+      font-size: 1.125rem;
+
+      &:hover {
+        color: #ed8000;
+        text-decoration: none;
+      }
+    }
   }
 
   &__level {

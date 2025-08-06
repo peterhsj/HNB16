@@ -10366,6 +10366,16 @@ form {
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
+.hnb__link--icon {
+  color: #0099cc;
+  text-decoration: none;
+  line-height: 1;
+  font-size: 1.125rem;
+}
+.hnb__link--icon:hover {
+  color: #ed8000;
+  text-decoration: none;
+}
 .hnb__level {
   margin: auto;
   padding-left: 0;
