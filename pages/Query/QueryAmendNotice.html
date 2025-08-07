@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <!-- 修改申請書 -->
+  <!-- 修改通知書 -->
   <div id="lcListPage" class="py-4 px-5">
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
       <ol class="breadcrumb fs-6">
@@ -23,14 +23,14 @@
           <a id="homePage" class="hnb__path" href="javascript:void(0)">首頁</a>
         </li>
         <li class="breadcrumb-item">查詢作業</li>
-        <li class="breadcrumb-item active" aria-current="page">修改申請書</li>
+        <li class="breadcrumb-item active" aria-current="page">修改通知書</li>
       </ol>
     </nav>
 
-    <!-- 查詢修改申請書 -->
+    <!-- 查詢修改通知書 -->
     <div id="queryForm">
       <form>
-        <h1 class="py-2 fs-4 fw-bolder">查詢修改申請書</h1>
+        <h1 class="py-2 fs-4 fw-bolder">查詢修改通知書</h1>
         <div class="mb-2 card">
           <div class="card-body bg-light">
             <div class="row pb-2">
@@ -39,6 +39,14 @@
                   <label for="lcNo" class="col-2 col-md-3 col-form-label text-end text-nowrap">信用狀號碼</label>
                   <div class="col-10 col-md-9">
                     <input type="text" class="form-control form-control-sm" id="lcNo">
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="row">
+                  <label for="appNo" class="col-2 col-md-3 col-form-label text-end text-nowrap">修改通知書號碼</label>
+                  <div class="col-10 col-md-9">
+                    <input type="text" class="form-control form-control-sm" id="appNo">
                   </div>
                 </div>
               </div>
@@ -79,19 +87,15 @@
                   <div class="pt-1 col-10 col-md-9 d-flex flex-wrap align-items-center">
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="checkbox" id="status1" value="option1">
-                      <label class="form-check-label text-nowrap" for="status1">待經辦審核</label>
+                      <label class="form-check-label text-nowrap" for="status1">待賣方回覆</label>
                     </div>
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="checkbox" id="status2" value="option1">
-                      <label class="form-check-label text-nowrap" for="status2">待主管審核</label>
+                      <label class="form-check-label text-nowrap" for="status2">賣方未接受</label>
                     </div>
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="checkbox" id="status3" value="option1">
-                      <label class="form-check-label text-nowrap" for="status3">已開立</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="status4" value="option1">
-                      <label class="form-check-label text-nowrap" for="status4">已拒絕</label>
+                      <label class="form-check-label text-nowrap" for="status3">賣方已接受</label>
                     </div>
                   </div>
                 </div>
@@ -141,9 +145,9 @@
       </form>
     </div>
 
-    <!-- 修改申請書清冊 -->
+    <!-- 修改通知書清冊 -->
     <div id="queryList" class="hnb__hide">
-      <h1 class="py-2 fs-4 fw-bolder">修改申請書清冊</h1>
+      <h1 class="py-2 fs-4 fw-bolder">修改通知書清冊</h1>
       <div class="card">
         <div class="card-body bg-light">
           <div class="table-responsive">
@@ -151,21 +155,14 @@
               <thead>
                 <tr>
                   <th scope="col" class="hnb__tbhd">編號</th>
-                  <th scope="col" class="hnb__tbhd">修改申請書號碼</th>
+                  <th scope="col" class="hnb__tbhd">修改通知書號碼</th>
                   <th scope="col" class="hnb__tbhd">信用狀號碼</th>
                   <th scope="col" class="hnb__tbhd text-nowrap">信用狀別</th>
-                  <th scope="col" class="hnb__tbhd">修改通知書號碼</th>
+                  <th scope="col" class="hnb__tbhd">開立日期</th>
                   <th scope="col" class="hnb__tbhd">申請人</th>
-                  <th scope="col" class="hnb__tbhd">通知銀行</th>
-                  <th scope="col" class="hnb__tbhd">申請日期</th>
                   <th scope="col" class="hnb__tbhd">受益人</th>
+                  <th scope="col" class="hnb__tbhd">通知銀行</th>
                   <th scope="col" class="hnb__tbhd">狀態</th>
-                  <th scope="col" class="hnb__tbhd text-nowrap">尚待<br>審核人員</th>
-                  <th scope="col" class="hnb__tbhd text-nowrap">手續費<br>收據</th>
-                  <th scope="col" class="hnb__tbhd text-nowrap">保證金<br>收款證明</th>
-                  <th scope="col" class="hnb__tbhd text-nowrap">現金<br>繳費單</th>
-                  <th scope="col" class="hnb__tbhd text-nowrap">承兌手續<br>費收據</th>
-                  <th scope="col" class="hnb__tbhd text-nowrap">轉帳支出<br>傳票</th>
                 </tr>
               </thead>
               <tbody>
@@ -173,103 +170,39 @@
                   <td class="text-center text-nowrap">1</td>
                   <td class="text-center text-nowrap">
                     <a href="#" class="hnb__link--text" data-bs-toggle="modal"
-                      data-bs-target="#lcAppDetailModal">099700017161000861-A-02</a>
+                      data-bs-target="#noticeModal">099700017161000861-02</a>
                   </td>
                   <td class="text-center text-nowrap">
                     <a href="#" class="hnb__link--text" data-bs-toggle="modal" data-bs-target="#lcDetailModal"
                       onclick="changeLcType('遠期')">099700049161000861</a>
                   </td>
                   <td class="text-center text-nowrap">遠期</td>
-                  <td class="text-center text-nowrap">
-                    <a href="#" class="hnb__link--text" data-bs-toggle="modal"
-                      data-bs-target="#noticeModal">099700017161000861-02</a>
-                  </td>
-                  <td class="text-nowrap">丙丁公司</td>
-                  <td class="text-center text-nowrap">高雄分行</td>
                   <td class="text-center">
                     2025/06/05
                   </td>
+                  <td class="text-nowrap">丙丁公司</td>
                   <td class="text-nowrap">中鴻公司</td>
-                  <td class="text-center text-nowrap">已核准</td>
-                  <td class="text-center">
-                    NA
-                  </td>
-                  <td class="text-center">
-                    <a href="#" class="hnb__link--icon" data-bs-toggle="modal" data-bs-target="#issuePayModal">
-                      <span class="mdi mdi-file-document"></span>
-                    </a>
-                  </td>
-                  <td class="text-center">
-                    <a href="#" class="hnb__link--icon" data-bs-toggle="modal" data-bs-target="#issueImpModal">
-                      <span class="mdi mdi-file-document"></span>
-                    </a>
-                  </td>
-                  <td class="text-center">
-                    <a href="#" class="hnb__link--icon" data-bs-toggle="modal" data-bs-target="#issueCvModal">
-                      <span class="mdi mdi-file-document"></span>
-                    </a>
-                  </td>
-                  <td class="text-center">
-                    <a href="#" class="hnb__link--icon" data-bs-toggle="modal" data-bs-target="#acceptReceiptModal">
-                      <span class="mdi mdi-file-document"></span>
-                    </a>
-                  </td>
-                  <td class="text-center">
-                    <a href="#" class="hnb__link--icon" data-bs-toggle="modal" data-bs-target="#cvPayModal">
-                      <span class="mdi mdi-file-document"></span>
-                    </a>
-                  </td>
+                  <td class="text-center text-nowrap">高雄分行</td>
+                  <td class="text-center text-nowrap">未接受</td>
                 </tr>
                 <tr>
                   <td class="text-center text-nowrap">2</td>
                   <td class="text-center text-nowrap">
                     <a href="#" class="hnb__link--text" data-bs-toggle="modal"
-                      data-bs-target="#lcAppDetailModal">099700017161000862-A-02</a>
+                      data-bs-target="#noticeModal">099700017161000862-02</a>
                   </td>
                   <td class="text-center text-nowrap">
                     <a href="#" class="hnb__link--text" data-bs-toggle="modal" data-bs-target="#lcDetailModal"
                       onclick="changeLcType('即期')">099700049161000862</a>
                   </td>
                   <td class="text-center text-nowrap">即期</td>
-                  <td>
-                    <a href="#" class="hnb__link--text" data-bs-toggle="modal"
-                      data-bs-target="#noticeModal">099700017161000862-02</a>
-                  </td>
-                  <td class="text-nowrap">甲乙公司</td>
-                  <td class="text-center text-nowrap">高雄分行</td>
                   <td class="text-center">
                     2025/06/05
                   </td>
+                  <td class="text-nowrap">甲乙公司</td>
                   <td class="text-nowrap">中鴻公司</td>
-                  <td class="text-center text-nowrap">待主管審核</td>
-                  <td class="text-center">
-                    NA
-                  </td>
-                  <td class="text-center">
-                    <a href="#" class="hnb__link--icon" data-bs-toggle="modal" data-bs-target="#issuePayModal">
-                      <span class="mdi mdi-file-document"></span>
-                    </a>
-                  </td>
-                  <td class="text-center">
-                    <a href="#" class="hnb__link--icon" data-bs-toggle="modal" data-bs-target="#issueImpModal">
-                      <span class="mdi mdi-file-document"></span>
-                    </a>
-                  </td>
-                  <td class="text-center">
-                    <a href="#" class="hnb__link--icon" data-bs-toggle="modal" data-bs-target="#issueCvModal">
-                      <span class="mdi mdi-file-document"></span>
-                    </a>
-                  </td>
-                  <td class="text-center">
-                    <a href="#" class="hnb__link--icon" data-bs-toggle="modal" data-bs-target="#acceptReceiptModal">
-                      <span class="mdi mdi-file-document"></span>
-                    </a>
-                  </td>
-                  <td class="text-center">
-                    <a href="#" class="hnb__link--icon" data-bs-toggle="modal" data-bs-target="#cvPayModal">
-                      <span class="mdi mdi-file-document"></span>
-                    </a>
-                  </td>
+                  <td class="text-center text-nowrap">高雄分行</td>
+                  <td class="text-center text-nowrap">已接受</td>
                 </tr>
               </tbody>
             </table>
@@ -797,14 +730,14 @@
     </div>
   </div>
 
-  <!-- 修改申請書 視窗 -->
+  <!-- 修改通知書 視窗 -->
   <div class="modal fade" id="lcAppDetailModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="lcAppDetailModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-xl modal-dialog-centered">
       <div class="modal-content hnb__modal">
         <div class="modal-header py-2 border-bottom-0">
           <h5 class="modal-title fs-5 fw-bolder text--hnb" id="lcAppDetailModalLabel">
-            修改申請書
+            修改通知書
           </h5>
           <button type="button" class="m-0 p-0 btn btn-link hnb__btn--close" data-bs-dismiss="modal" aria-label="Close">
             <span class="mdi mdi-close"></span>
@@ -818,7 +751,7 @@
                   華南銀行 高雄分行
                 </div>
                 <div class="col-12 py-1 hnb__bankName text-center">
-                  國內信用狀修改申請書
+                  國內信用狀修改通知書
                 </div>
               </div>
             </div>
