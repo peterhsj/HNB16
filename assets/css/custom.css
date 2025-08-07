@@ -10596,6 +10596,12 @@ form {
 .hnb__bg--white {
   background-color: #FFFFFF;
 }
+.hnb__line--dot {
+  width: 100%;
+  height: 1px;
+  border-top: dashed 1px #ccc;
+  margin: 10px 0;
+}
 
 .page-width {
   width: 150px;
