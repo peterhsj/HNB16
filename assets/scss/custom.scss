@@ -307,7 +307,6 @@ form {
 
   &__table {
     border: 1px solid #a6c2d1;
-    //border-bottom: 2px #a6c2d1 solid;
 
     th,
     td {
@@ -333,6 +332,11 @@ form {
 
       > :not(:last-child)> :last-child>* {
         border-bottom-color: inherit;
+      }
+
+      .hnb__tbhd {
+        background-color: #d5d5d5 !important;
+        color: #000000;
       }
     }
   }

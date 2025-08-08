@@ -10433,6 +10433,10 @@ form {
 .hnb__table--print > :not(:last-child) > :last-child > * {
   border-bottom-color: inherit;
 }
+.hnb__table--print .hnb__tbhd {
+  background-color: #d5d5d5 !important;
+  color: #000000;
+}
 .hnb__tbtitle {
   background-color: #f2f8fb;
   text-align: left;
