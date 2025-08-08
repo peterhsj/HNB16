@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <!-- 主管核准開狀紀錄 -->
+  <!-- 主管核准押匯紀錄 -->
   <div id="lcListPage" class="py-4 px-5">
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
       <ol class="breadcrumb fs-6">
@@ -23,14 +23,14 @@
           <a id="homePage" class="hnb__path" href="javascript:void(0)">首頁</a>
         </li>
         <li class="breadcrumb-item">查詢作業</li>
-        <li class="breadcrumb-item active" aria-current="page">主管核准開狀紀錄</li>
+        <li class="breadcrumb-item active" aria-current="page">主管核准押匯紀錄</li>
       </ol>
     </nav>
 
-    <!-- 查詢主管核准開狀紀錄 -->
+    <!-- 查詢主管核准押匯紀錄 -->
     <div id="queryForm">
       <form>
-        <h1 class="py-2 fs-4 fw-bolder">查詢主管核准開狀紀錄</h1>
+        <h1 class="py-2 fs-4 fw-bolder">查詢主管核准押匯紀錄</h1>
         <div class="mb-2 card">
           <div class="card-body bg-light">
             <div class="row py-2">
@@ -90,9 +90,9 @@
       </form>
     </div>
 
-    <!-- 主管核准開狀紀錄清冊 -->
+    <!-- 主管核准押匯紀錄清冊 -->
     <div id="queryList" class="hnb__hide">
-      <h1 class="py-2 fs-4 fw-bolder">主管核准開狀紀錄清冊</h1>
+      <h1 class="py-2 fs-4 fw-bolder">主管核准押匯紀錄清冊</h1>
       <div class="card">
         <div class="card-body bg-light">
           <div class="table-responsive">
@@ -100,11 +100,13 @@
               <thead>
                 <tr>
                   <th rowspan="2" scope="col" class="hnb__tbhd text-nowrap">編號</th>
-                  <th rowspan="2" scope="col" class="hnb__tbhd text-nowrap">借款人統編</th>
-                  <th rowspan="2" scope="col" class="hnb__tbhd text-nowrap">借款人名稱</th>
+                  <th rowspan="2" scope="col" class="hnb__tbhd text-nowrap">受益人統編</th>
+                  <th rowspan="2" scope="col" class="hnb__tbhd text-nowrap">受益人名稱</th>
+                  <th rowspan="2" scope="col" class="hnb__tbhd text-nowrap">押匯日期</th>
+                  <th rowspan="2" scope="col" class="hnb__tbhd text-nowrap">匯票號碼</th>
+                  <th rowspan="2" scope="col" class="hnb__tbhd text-nowrap">押匯金額</th>
                   <th rowspan="2" scope="col" class="hnb__tbhd text-nowrap">信用狀號碼</th>
-                  <th rowspan="2" scope="col" class="hnb__tbhd text-nowrap">信用狀別</th>
-                  <th rowspan="2" scope="col" class="hnb__tbhd text-nowrap">信用狀金額</th>
+                  <th rowspan="2" scope="col" class="hnb__tbhd text-nowrap">信用狀餘額</th>
                   <th rowspan="2" scope="col" class="hnb__tbhd text-nowrap">核准時間</th>
                   <th rowspan="2" scope="col" class="hnb__tbhd text-nowrap">授權原因</th>
                   <th colspan="2" scope="col" class="hnb__tbhd text-nowrap">授權主管</th>
@@ -119,8 +121,10 @@
                   <td class="text-center">1</td>
                   <td class="text-center">12345678</td>
                   <td class="text-nowrap">泰西企業股份有限公司</td>
+                  <td class="text-center">2005/06/29</td>
+                  <td class="text-center">08AB00203</td>
+                  <td class="text-end">$5,000,000</td>
                   <td class="text-center">094222007123456001</td>
-                  <td class="text-center">即期</td>
                   <td class="text-end">$5,000,000</td>
                   <td class="text-center">2005/06/29 20:19:48.233</td>
                   <td class="text-center">核准開狀</td>
@@ -129,10 +133,12 @@
                 </tr>
                 <tr>
                   <td class="text-center">2</td>
-                  <td class="text-center">85236974</td>
+                  <td class="text-center">12345678</td>
                   <td class="text-nowrap">泰西企業股份有限公司</td>
+                  <td class="text-center">2005/06/29</td>
+                  <td class="text-center">08AB00204</td>
+                  <td class="text-end">$5,000,000</td>
                   <td class="text-center">094222007123456001</td>
-                  <td class="text-center">遠期</td>
                   <td class="text-end">$10</td>
                   <td class="text-center">2005/06/29 20:19:48.233</td>
                   <td class="text-center">核准修改</td>
@@ -143,9 +149,11 @@
                   <td class="text-center">3</td>
                   <td class="text-center">65478932</td>
                   <td class="text-nowrap">泰西企業股份有限公司</td>
+                  <td class="text-center">2005/06/29</td>
+                  <td class="text-center">08AB00205</td>
+                  <td class="text-end">$5,000,000</td>
                   <td class="text-center">094222007123456001</td>
-                  <td class="text-center">即期</td>
-                  <td class="text-end">&nbsp;</td>
+                  <td class="text-center"></td>
                   <td class="text-center">2005/06/29 20:19:48.233</td>
                   <td class="text-center">核准開狀</td>
                   <td>HN2221</td>
@@ -155,8 +163,10 @@
                   <td class="text-center">4</td>
                   <td class="text-center">96258741</td>
                   <td class="text-nowrap">泰西企業股份有限公司</td>
+                  <td class="text-center">2005/06/29</td>
+                  <td class="text-center">08AB00206</td>
+                  <td class="text-end">$5,000,000</td>
                   <td class="text-center">094222007123456001</td>
-                  <td class="text-center">即期</td>
                   <td class="text-end">$10</td>
                   <td class="text-center">2005/06/29 20:19:48.233</td>
                   <td class="text-center">核准開狀</td>
@@ -195,7 +205,7 @@
     // 開啟列印視窗 printList
     function printList() {
       window.open(
-        '../Query/QueryPrint.html?page=QueryMarLc',
+        '../Query/QueryPrint.html?page=QueryMarDraft',
         'printList',
         'scrollbars=yes'
         //'width=800,height=600,scrollbars=yes'
