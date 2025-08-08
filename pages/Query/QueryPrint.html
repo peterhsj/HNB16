@@ -237,10 +237,88 @@
     </div>
   </div>
 
+
+  <!-- 未結案信用狀額度與保證金 QueryOutstandLc -->
+  <div id="QueryOutstandLc" class="p-4 hnb__hide">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 fs-1-5 fw-bold text-center hnb__bankName">
+          <span class="pe-5">華南商業銀行</span>
+          <span>未結案信用狀額度與保證金明細表</span>
+        </div>
+        <div class="my-3 col-5">
+          <span class="fw-bold">單位代號：</span>
+          <span>700 高雄分行</span>
+        </div>
+        <div class="my-3 col-7">
+          <span>中華民國 114 年 05 月 10 日</span>
+        </div>
+      </div>
+      <div class="row"></div>
+    </div>
+    <div class="my-1">
+      <span class="fw-bold">申請人名稱：</span>
+      <span>網優股份有限公司</span>
+    </div>
+    <div class="my-1">
+      <span class="fw-bold">單位：</span>
+      <span>新台幣 (元)</span>
+    </div>
+    <div class="table-responsive">
+      <table class="mb-0 table table-striped table-sm hnb__table hnb__bg--white">
+        <thead>
+          <tr>
+            <th scope="col" class="hnb__tbhd text-nowrap">信用狀號碼</th>
+            <th scope="col" class="hnb__tbhd text-nowrap">開狀日期</th>
+            <th scope="col" class="hnb__tbhd text-nowrap">有效日期</th>
+            <th scope="col" class="hnb__tbhd text-nowrap">開狀金額</th>
+            <th scope="col" class="hnb__tbhd text-nowrap">未押金額</th>
+            <th scope="col" class="hnb__tbhd text-nowrap">未退還保證金</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center">099700049161000861</td>
+            <td class="text-center">2005/06/29</td>
+            <td class="text-center">2005/06/29</td>
+            <td class="text-end">$5,000,000</td>
+            <td class="text-end">$5,000,000</td>
+            <td class="text-end">$5,000,000</td>
+          </tr>
+          <tr>
+            <td class="text-center">099700049161000862</td>
+            <td class="text-center">2005/06/29</td>
+            <td class="text-center">2005/06/29</td>
+            <td class="text-end">$5,000,000</td>
+            <td class="text-end">$5,000,000</td>
+            <td class="text-end">$5,000,000</td>
+          </tr>
+          <tr>
+            <td class="text-center">099700049161000863</td>
+            <td class="text-center">2005/06/29</td>
+            <td class="text-center">2005/06/29</td>
+            <td class="text-end">$5,000,000</td>
+            <td class="text-end">$5,000,000</td>
+            <td class="text-end">$5,000,000</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3" class="text-center">合計</td>
+            <td class="text-end">$5,000,000</td>
+            <td class="text-end">$5,000,000</td>
+            <td class="text-end">$5,000,000</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
   <!-- JS -->
   <script>
     const QueryMarLc = document.querySelector('#QueryMarLc');
     const QueryMarDraft = document.querySelector('#QueryMarDraft');
+    const QueryOutstandLc = document.querySelector('#QueryOutstandLc');
     let page = null; // 預設經辦
     function getPage() {
       const urlSearchParams = new URLSearchParams(window.location.search);
@@ -255,6 +333,9 @@
         break;
       case 'QueryMarDraft':
         QueryMarDraft.classList.remove('hnb__hide');
+        break;
+      case 'QueryOutstandLc':
+        QueryOutstandLc.classList.remove('hnb__hide');
         break;
       default:
         break;
