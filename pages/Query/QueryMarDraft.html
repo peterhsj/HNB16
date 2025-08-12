@@ -92,7 +92,15 @@
 
     <!-- 主管核准押匯紀錄清冊 -->
     <div id="queryList" class="hnb__hide">
-      <h1 class="py-2 fs-4 fw-bolder">主管核准押匯紀錄清冊</h1>
+      <div class="py-2 d-flex align-items-center justify-content-between">
+        <h1 class="mb-0 fs-4 fw-bolder">主管核准押匯紀錄清冊</h1>
+        <div>
+          <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--print text-nowrap">
+            <span class="mdi mdi-printer"></span>
+            列印
+          </button>
+        </div>
+      </div>
       <div class="card">
         <div class="card-body bg-light">
           <div class="table-responsive">
@@ -177,12 +185,6 @@
             </table>
           </div>
         </div>
-      </div>
-      <div class="my-3 text-center">
-        <button type="button" class="m-1 px-3 btn btn-sm hnb__btn--print text-nowrap" onclick="printList()">
-          <span class="mdi mdi-printer"></span>
-          列印
-        </button>
       </div>
     </div>
   </div>
